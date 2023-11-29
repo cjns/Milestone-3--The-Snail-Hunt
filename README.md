@@ -68,9 +68,10 @@ A 'Student' can have multiple 'SnailObservation' records. This is a one-to-many 
 
 1. Entity: Student
    - Attributes:
-   - student_id (Primary Key)
-   - student_name (string)
-   - other student-related information.
+   - id (Primary Key)
+   - name (string)
+   - email (string)
+   - password (string)
 
 2. Entity: SnailObservation
    - Attributes:
