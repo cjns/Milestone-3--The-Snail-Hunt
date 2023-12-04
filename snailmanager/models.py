@@ -19,7 +19,6 @@ class User(db.Model):
         """
 
 
-
 class Snails(db.Model):
     # schema for the Task model
     observation_id = db.Column(db.Integer, primary_key=True)
