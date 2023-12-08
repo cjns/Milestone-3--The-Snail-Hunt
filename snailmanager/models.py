@@ -7,7 +7,7 @@ class User(db.Model):
     username = db.Column(db.String(25), unique=True, nullable=False)
     email = db.Column(db.String(25), unique=False, nullable=False)
     password = db.Column(db.String(), unique=True, nullable=False)
-    snails = db.relationship("Snails", backref="user", cascade="all, delete", lazy=True)
+    observation = db.relationship("Observation", backref="user", cascade="all, delete", lazy=True)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
@@ -19,13 +19,16 @@ class User(db.Model):
         """
 
 
-class Snails(db.Model):
+class Observation(db.Model):
     # schema for the Task model
     observation_id = db.Column(db.Integer, primary_key=True)
-    observation_date = db.Column(db.DateTime, unique=False, nullable=False)
-    snail_color = db.Column(db.String(25), unique=False, nullable=False)
+    observation_date = db.Column(db.Date, unique=False, nullable=False)
+    observation_time = db.Column(db.Time, unique=False, nullable=False)
+    snail_colour = db.Column(db.String(25), unique=False, nullable=False)
     banding_count = db.Column(db.Integer, unique=False, nullable=False)
     location = db.Column(db.Text, unique=False, nullable=False)
+    observation_count = db.Column(db.Integer, unique=False, nullable=False)
+    recorder = db.Column(db.Text, unique=False, nullable=False)
     habitat = db.Column(db.Text, unique=False, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey(User.user_id, ondelete="CASCADE"), nullable=False)
 
