@@ -13,7 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Time Picker
     var timepicker = document.querySelectorAll('.timepicker');
     M.Timepicker.init(timepicker, {
+        twelveHour: false, // Use 24-hour format
         i18n: {done: "Ok"}
     });
+
+    // Collapsibles
+    var collapsibles = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsibles);
 });
 
