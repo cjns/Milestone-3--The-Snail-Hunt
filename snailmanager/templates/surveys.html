@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="light-green-text text-darken-4 center-align">Survey</h1>
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_survey') }}" class="btn-large light-green darken-2">
+            Add Survey <i class="fa-solid fa-square-plus right"></i>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+  {% for survey in surveys %}
+    <div class="col s12">
+      <div class="card blue-grey">
+        <div class="card-content white-text">
+          <span class="survey-date">{{ survey.survey_date }}</span>
+          <span class="survey-time">{{ survey.survey_time }}</span>
+          <span class="yellow-brown-lipped-snail-0_bands">{{ survey.yellow_brown_lipped_snail_0_bands }}</span>
+          <span class="pink-brown-lipped-snail-0-bands">{{ survey.pink_brown_lipped_snail_0_bands }}</span>
+          <span class="brown-brown-lipped-snail-0-bands">{{ survey.brown_brown_lipped_snail_0_bands }}</span>
+          <span class="yellow-brown-lipped-snail-1-band">{{ survey.yellow_brown_lipped_snail_1_band }}</span>
+          <span class="pink-brown-lipped-snail-1-band">{{ survey.pink_brown_lipped_snail_1_band }}</span>
+          <span class="brown-brown-lipped-snail-1-band">{{ survey.brown_brown_lipped_snail_1_band }}</span>
+          <span class="yellow-brown-lipped-snail-many-bands">{{ survey.yellow_brown_lipped_snail_many_bands }}</span>
+          <span class="pink-brown-lipped-snail-many-bands">{{ survey.pink_brown_lipped_snail_many_bands }}</span>
+          <span class="brown-brown-lipped-snail-many-bands">{{ survey.brown_brown_lipped_snail_many_bands }}</span>
+          <span class="yellow-white-lipped-snail-0-bands">{{ survey.yellow_white_lipped_snail_0_bands }}</span>
+          <span class="pink-white-lipped-snail-0-bands">{{ survey.pink_white_lipped_snail_0_bands }}</span>
+          <span class="brown-white-lipped-snail-0-bands">{{ survey.brown_white_lipped_snail_0_bands }}</span>
+          <span class="yellow-white-lipped-snail-1-band">{{ survey.yellow_white_lipped_snail_1_band }}</span>
+          <span class="pink-white-lipped-snail-1-band">{{ survey.pink_white_lipped_snail_1_band }}</span>
+          <span class="brown-white-lipped-snail-1-band">{{ survey.brown_white_lipped_snail_1_band }}</span>
+          <span class="yellow-white-lipped-snail-many-bands">{{ survey.yellow_white_lipped_snail_many_bands }}</span>
+          <span class="pink-white-lipped-snail-many-bands">{{ survey.pink_white_lipped_snail_many_bands }}</span>
+          <span class="brown-white-lipped-snail-many-bands">{{ survey.brown_white_lipped_snail_many_bands }}</span>
+          <span class="survey-habitat">{{ survey.habitat }}</span>
+          <span class="survey-location">{{ survey.location }}</span>
+          <span class="survey-recorder">{{ survey.recorder }}</span>
+        </div>
+        <div class="card-action">
+          <a href="#" class="btn green accent-4">Edit</a>
+          <a href="#" class="btn red">Delete</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+
+{% endblock %}
