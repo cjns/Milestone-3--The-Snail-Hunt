@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from snailmanager import app, db
-from snailmanager.models import User, Survey
+from snailmanager.models import Survey # User
 
 
 @app.route("/")
@@ -21,6 +21,9 @@ def add_survey():
         new_survey = Survey(
             survey_date=request.form.get("survey_date"),
             survey_time=request.form.get("survey_time"),
+            survey_location=request.form.get("survey_location"),
+            survey_habitat=request.form.get("survey_habitat"),
+            survey_recorder=request.form.get("survey_recorder"),
             yellow_brown_lipped_snail_0_bands=request.form.get("yellow_brown_lipped_snail_0_bands"),
             pink_brown_lipped_snail_0_bands=request.form.get("pink_brown_lipped_snail_0_bands"),
             brown_brown_lipped_snail_0_bands=request.form.get("brown_brown_lipped_snail_0_bands"),
@@ -38,10 +41,7 @@ def add_survey():
             brown_white_lipped_snail_1_band=request.form.get("brown_white_lipped_snail_1_band"),
             yellow_white_lipped_snail_many_bands=request.form.get("yellow_white_lipped_snail_many_bands"),
             pink_white_lipped_snail_many_bands=request.form.get("pink_white_lipped_snail_many_bands"),
-            brown_white_lipped_snail_many_bands=request.form.get("brown_white_lipped_snail_many_bands"),
-            survey_habitat=request.form.get("survey_habitat"),
-            survey_location=request.form.get("survey_location"),
-            survey_recorder=request.form.get("survey_recorder")
+            brown_white_lipped_snail_many_bands=request.form.get("brown_white_lipped_snail_many_bands")
         )
         db.session.add(new_survey)
         db.session.commit()
