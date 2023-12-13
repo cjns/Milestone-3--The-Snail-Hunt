@@ -1,35 +1,44 @@
 /* Sticky Footer  */
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
-  
-  /* Headings */
-  h1 {
-    font-size: 2.2rem;
-  }
+main {
+  flex: 1 0 auto;
+}
 
-  h2 {
-    font-size: 2rem;
-  }
-  
-  h3 {
-    font-size: 1.8rem;
-  }
-  
-  h4 {
-    font-size: 1.6rem;
-  }
-  
-  h5 {
-    font-size: 1.4rem;
-  }
-  
-  h6 {
-    font-size: 1.2rem;
-  }
+/* Headings */
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+/* Tables */
+.snail_table {
+  margin-bottom: 2rem;
+}
+
+.snail_table>caption {
+  font-size: 1.5rem;
+}
