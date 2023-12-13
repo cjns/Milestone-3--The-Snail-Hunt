@@ -18,11 +18,11 @@
       <strong>{{ survey.survey_date.strftime("%d/%b/%Y") }}, {{ survey.survey_location }}, {{ survey.survey_recorder }}</strong>
     </div>
     <div class="collapsible-body">
-      <strong>Date: {{ survey.survey_date.strftime("%d/%b/%Y") }}</strong>
-      <p>Time: {{ survey.survey_time.strftime("%I:%M") }}</p>
-      <p>Location: {{ survey.survey_location }}</p>
-      <p>Habitat: {{ survey.survey_habitat }}</p>
-      <p>Surveyor: {{ survey.survey_recorder }}</p>
+      <p><strong>Date:</strong> {{ survey.survey_date.strftime("%d/%b/%Y") }}</p>
+      <p><strong>Time:</strong> {{ survey.survey_time.strftime("%I:%M") }}</p>
+      <p><strong>Location:</strong> {{ survey.survey_location }}</p>
+      <p><strong>Habitat:</strong> {{ survey.survey_habitat }}</p>
+      <p><strong>Surveyor:</strong> {{ survey.survey_recorder }}</p>
       <table class="snail_table">
         <caption>Brown lipped snail (Corea nemoralis)</caption>
         <thead>
