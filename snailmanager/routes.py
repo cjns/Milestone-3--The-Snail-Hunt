@@ -16,6 +16,7 @@ def surveys():
 
 @app.route("/add_survey", methods=["GET", "POST"])
 def add_survey():
+    surveys = list(Survey.query.order_by(Survey.survey_date).all())
     if request.method == "POST":
         # Retrieve form data
         new_survey = Survey(
@@ -46,4 +47,36 @@ def add_survey():
         db.session.add(new_survey)
         db.session.commit()
         return redirect(url_for("surveys"))
-    return render_template("add_survey.html")
+    return render_template("add_survey.html", surveys=surveys)
+
+
+@app.route("/edit_survey/<int:survey_id>", methods=["GET", "POST"])
+def edit_survey(survey_id):
+    survey = Survey.query.get_or_404(survey_id)
+    if request.method == "POST":
+        # Retrieve form data
+        survey.survey_date = request.form.get("survey_date"),
+        survey.survey_time = request.form.get("survey_time"),
+        survey.survey_location = request.form.get("survey_location"),
+        survey.survey_habitat = request.form.get("survey_habitat"),
+        survey.survey_recorder = request.form.get("survey_recorder"),
+        survey.yellow_brown_lipped_snail_0_bands = request.form.get("yellow_brown_lipped_snail_0_bands"),
+        survey.pink_brown_lipped_snail_0_bands = request.form.get("pink_brown_lipped_snail_0_bands"),
+        survey.brown_brown_lipped_snail_0_bands = request.form.get("brown_brown_lipped_snail_0_bands"),
+        survey.yellow_brown_lipped_snail_1_band = request.form.get("yellow_brown_lipped_snail_1_band"),
+        survey.pink_brown_lipped_snail_1_band = request.form.get("pink_brown_lipped_snail_1_band"),
+        survey.brown_brown_lipped_snail_1_band = request.form.get("brown_brown_lipped_snail_1_band"),
+        survey.yellow_brown_lipped_snail_many_bands = request.form.get("yellow_brown_lipped_snail_many_bands"),
+        survey.pink_brown_lipped_snail_many_bands = request.form.get("pink_brown_lipped_snail_many_bands"),
+        survey.brown_brown_lipped_snail_many_bands = request.form.get("brown_brown_lipped_snail_many_bands"),
+        survey.yellow_white_lipped_snail_0_bands = request.form.get("yellow_white_lipped_snail_0_bands"),
+        survey.pink_white_lipped_snail_0_bands = request.form.get("pink_white_lipped_snail_0_bands"),
+        survey.brown_white_lipped_snail_0_bands = request.form.get("brown_white_lipped_snail_0_bands"),
+        survey.yellow_white_lipped_snail_1_band = request.form.get("yellow_white_lipped_snail_1_band"),
+        survey.pink_white_lipped_snail_1_band = request.form.get("pink_white_lipped_snail_1_band"),
+        survey.brown_white_lipped_snail_1_band = request.form.get("brown_white_lipped_snail_1_band"),
+        survey.yellow_white_lipped_snail_many_bands = request.form.get("yellow_white_lipped_snail_many_bands"),
+        survey.pink_white_lipped_snail_many_bands = request.form.get("pink_white_lipped_snail_many_bands"),
+        survey.brown_white_lipped_snail_many_bands = request.form.get("brown_white_lipped_snail_many_bands")
+        db.session.commit()
+    return render_template("edit_survey.html", survey=survey)

@@ -1,0 +1,314 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="light-green-text text-darken-4 center-align">Edit Your Survey</h1>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_survey', survey_id=survey.survey_id) }}">
+
+        <!-- Survey Date -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-regular fa-calendar-days prefix light-blue-text text-darken-4"></i>
+                <input id="survey_date" name="survey_date" value="{{ survey.survey_date.strftime('%d/%b/%Y') }}" type="text" class="datepicker validate" required>
+                <label for="survey_date">Date of Survey</label>
+            </div>
+        </div>
+
+        <!-- Survey Time -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-regular fa-clock prefix light-blue-text text-darken-4"></i>
+                <input id="survey_time" name="survey_time" value="{{ survey.survey_time.strftime('%I:%M') }}" type="time" class="timepicker validate" required>
+                <label for="survey_time">Time of Survey</label>
+            </div>
+        </div>
+
+        <!-- Location -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-location-dot prefix light-blue-text text-darken-4"></i>
+                <input id="survey_location" name="survey_location" value="{{ survey.survey_location }}" type="text" class="validate" required>
+                <label for="survey_location">Location</label>
+            </div>
+        </div>
+
+        <!-- Habitat -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-tree-city prefix light-blue-text text-darken-4"></i>
+                <input id="survey_habitat" name="survey_habitat" value="{{ survey.survey_habitat }}" type="text" class="validate" required>
+                <label for="survey_habitat">Habitat (woodland or scrub/hedgerow or tall herbs/grassland/sand
+                    dunes)</label>
+            </div>
+        </div>
+
+        <!-- Recorder -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-signature prefix light-blue-text text-darken-4"></i>
+                <input id="survey_recorder" name="survey_recorder" value="{{ survey.survey_recorder }}" type="text" class="validate" required>
+                <label for="survey_recorder">Name of Recorder(s)</label>
+            </div>
+        </div>
+
+        <!-- Brown Lipped Snails -->
+        <ul class="collapsible">
+            <h2 class="center">Brown Lipped Snail (Cepaea nemoralis)</h2>
+            <li>
+                <div class="collapsible-header"><i class="material-icons"></i>0 Bands</div>
+                <div class="collapsible-body">
+
+                    <!-- Yellow, Brown Lipped Snail, 0 Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #fbfb00 !important;"></i>
+                            <input id="yellow_brown_lipped_snail_0_bands" name="yellow_brown_lipped_snail_0_bands"
+                                value="{{ survey.yellow_brown_lipped_snail_0_bands }}" type="number" class="validate" required>
+                            <label for="yellow_brown_lipped_snail_0_bands">Number of Yellow snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Pink, Brown Lipped Snail, 0 Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #ff80ff !important;"></i>
+                            <input id="pink_brown_lipped_snail_0_bands" name="pink_brown_lipped_snail_0_bands"
+                                value="{{ survey.pink_brown_lipped_snail_0_bands }}" type="number" class="validate" required>
+                            <label for="pink_brown_lipped_snail_0_bands">Number of Pink snails found</label>
+                        </div>
+                    </div>
+
+
+                    <!-- Brown, Brown Lipped Snail, 0 Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #804000 !important;"></i>
+                            <input id="brown_brown_lipped_snail_0_bands" name="brown_brown_lipped_snail_0_bands"
+                                value="{{ survey.brown_brown_lipped_snail_0_bands }}" type="number" class="validate" required>
+                            <label for="brown_brown_lipped_snail_0_bands">Number of Brown snails found</label>
+                        </div>
+                    </div>
+
+
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons"></i>1 Band</div>
+                <div class="collapsible-body">
+
+                    <!-- Yellow, Brown Lipped Snail, 1 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-regular fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #fbfb00 !important;"></i>
+                            <input id="yellow_brown_lipped_snail_1_band" name="yellow_brown_lipped_snail_1_band"
+                                value="{{ survey.yellow_brown_lipped_snail_1_band }}" type="number" class="validate" required>
+                            <label for="yellow_brown_lipped_snail_1_band">Number of Yellow snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Pink, Brown Lipped Snail, 1 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-regular fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #ff80ff !important;"></i>
+                            <input id="pink_brown_lipped_snail_1_band" name="pink_brown_lipped_snail_1_band"
+                                value="{{ survey.pink_brown_lipped_snail_1_band }}" type="number" class="validate" required>
+                            <label for="pink_brown_lipped_snail_1_band">Number of Pink snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Brown, Brown Lipped Snail, 1 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-regular fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #804000 !important;"></i>
+                            <input id="brown_brown_lipped_snail_1_band" name="brown_brown_lipped_snail_1_band"
+                                value="{{ survey.brown_brown_lipped_snail_1_band }}" type="number" class="validate" required>
+                            <label for="brown_brown_lipped_snail_1_band">Number of Brown snails found</label>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons"></i>Many Bands</div>
+                <div class="collapsible-body">
+
+
+                    <!-- Yellow, Brown Lipped Snail, Many Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-bullseye prefix light-blue-text text-darken-4"
+                                style="color: #fbfb00 !important;"></i>
+                            <input id="yellow_brown_lipped_snail_many_bands" name="yellow_brown_lipped_snail_many_bands"
+                                value="{{ survey.yellow_brown_lipped_snail_many_bands }}" type="number" class="validate" required>
+                            <label for="yellow_brown_lipped_snail_many_bands">Number of Yellow snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Pink, Brown Lipped Snail, Many Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-bullseye prefix light-blue-text text-darken-4"
+                                style="color: #ff80ff !important;"></i>
+                            <input id="pink_brown_lipped_snail_many_bands" name="pink_brown_lipped_snail_many_bands"
+                                value="{{ survey.pink_brown_lipped_snail_many_bands }}" type="number" class="validate" required>
+                            <label for="pink_brown_lipped_snail_many_bands">Number of Pink snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Brown, Brown Lipped Snail, Many Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-bullseye prefix light-blue-text text-darken-4"
+                                style="color: #804000 !important;"></i>
+                            <input id="brown_brown_lipped_snail_many_bands" name="brown_brown_lipped_snail_many_bands"
+                                value="{{ survey.brown_brown_lipped_snail_many_bands }}" type="number" class="validate" required>
+                            <label for="brown_brown_lipped_snail_many_bands">Number of Brown snails found</label>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+
+        <!-- White Lipped Snails -->
+        <ul class="collapsible">
+            <h2 class="center">White Lipped Snail (Cepaea hortensis)</h2>
+            <li>
+                <div class="collapsible-header"><i class="material-icons"></i>0 Bands</div>
+                <div class="collapsible-body">
+
+                    <!-- Yellow, White Lipped Snail, 0 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #fbfb00 !important;"></i>
+                            <input id="yellow_white_lipped_snail_0_bands" name="yellow_white_lipped_snail_0_bands"
+                                value="{{ survey.yellow_white_lipped_snail_0_bands }}" type="number" class="validate" required>
+                            <label for="yellow_white_lipped_snail_0_bands">Number of Yellow snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Pink, White Lipped Snail, 0 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #ff80ff !important;"></i>
+                            <input id="pink_white_lipped_snail_0_bands" name="pink_white_lipped_snail_0_bands"
+                                value="{{ survey.pink_white_lipped_snail_0_bands }}" type="number" class="validate" required>
+                            <label for="pink_white_lipped_snail_0_bands">Number of Pink snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Brown, White Lipped Snail, 0 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #804000 !important;"></i>
+                            <input id="brown_white_lipped_snail_0_bands" name="brown_white_lipped_snail_0_bands"
+                                value="{{ survey.brown_white_lipped_snail_0_bands }}" type="number" class="validate" required>
+                            <label for="brown_white_lipped_snail_0_bands">Number of Brown snails found</label>
+                        </div>
+                    </div>
+
+
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons"></i>1 Band</div>
+                <div class="collapsible-body">
+
+                    <!-- Yellow, White Lipped Snail, 1 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-regular fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #fbfb00 !important;"></i>
+                            <input id="yellow_white_lipped_snail_1_band" name="yellow_white_lipped_snail_1_band"
+                                value="{{ survey.yellow_white_lipped_snail_1_band }}" type="number" class="validate" required>
+                            <label for="yellow_white_lipped_snail_1_band">Number of Yellow snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Pink, White Lipped Snail, 1 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-regular fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #ff80ff !important;"></i>
+                            <input id="pink_white_lipped_snail_1_band" name="pink_white_lipped_snail_1_band"
+                                value="{{ survey.pink_white_lipped_snail_1_band }}" type="number" class="validate" required>
+                            <label for="pink_white_lipped_snail_1_band">Number of Pink snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Brown, White Lipped Snail, 1 Band -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-regular fa-circle prefix light-blue-text text-darken-4"
+                                style="color: #804000 !important;"></i>
+                            <input id="brown_white_lipped_snail_1_band" name="brown_white_lipped_snail_1_band"
+                                value="{{ survey.brown_white_lipped_snail_1_band }}" type="number" class="validate" required>
+                            <label for="brown_white_lipped_snail_1_band">Number of Brown snails found</label>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons"></i>Many Bands</div>
+                <div class="collapsible-body">
+
+                    <!-- Yellow, White Lipped Snail, Many Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-bullseye prefix light-blue-text text-darken-4"
+                                style="color: #fbfb00 !important;"></i>
+                            <input id="yellow_white_lipped_snail_many_bands" name="yellow_white_lipped_snail_many_bands"
+                                value="{{ survey.yellow_white_lipped_snail_many_bands }}" type="number" class="validate" required>
+                            <label for="yellow_white_lipped_snail_many_bands">Number of Yellow snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Pink, White Lipped Snail, Many Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-bullseye prefix light-blue-text text-darken-4"
+                                style="color: #ff80ff !important;"></i>
+                            <input id="pink_white_lipped_snail_many_bands" name="pink_white_lipped_snail_many_bands"
+                                value="{{ survey.pink_white_lipped_snail_many_bands }}" type="number" class="validate" required>
+                            <label for="pink_white_lipped_snail_many_bands">Number of Pink snails found</label>
+                        </div>
+                    </div>
+
+                    <!-- Brown, White Lipped Snail, Many Bands -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-bullseye prefix light-blue-text text-darken-4"
+                                style="color: #804000 !important;"></i>
+                            <input id="brown_white_lipped_snail_many_bands" name="brown_white_lipped_snail_many_bands"
+                                value="{{ survey.brown_white_lipped_snail_many_bands }}" type="number" class="validate" required>
+                            <label for="brown_white_lipped_snail_many_bands">Number of Brown snails found</label>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+
+        <!-- Submit Button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large light-green darken-1">
+                    Edit Survey <i class="fa-regular fa-edit right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
