@@ -28,24 +28,42 @@ class Survey(db.Model):
     survey_habitat = db.Column(db.Text, unique=False, nullable=False)
     survey_recorder = db.Column(db.Text, unique=False, nullable=False)
     # user_id = db.Column(db.Integer, db.ForeignKey(User.user_id, ondelete="CASCADE"), nullable=False)
-    yellow_brown_lipped_snail_0_bands = db.Column(db.Integer, unique=False, nullable=False)
-    pink_brown_lipped_snail_0_bands = db.Column(db.Integer, unique=False, nullable=False)
-    brown_brown_lipped_snail_0_bands = db.Column(db.Integer, unique=False, nullable=False)
-    yellow_brown_lipped_snail_1_band = db.Column(db.Integer, unique=False, nullable=False)
-    pink_brown_lipped_snail_1_band = db.Column(db.Integer, unique=False, nullable=False)
-    brown_brown_lipped_snail_1_band = db.Column(db.Integer, unique=False, nullable=False)
-    yellow_brown_lipped_snail_many_bands = db.Column(db.Integer, unique=False, nullable=False)
-    pink_brown_lipped_snail_many_bands = db.Column(db.Integer, unique=False, nullable=False)
-    brown_brown_lipped_snail_many_bands = db.Column(db.Integer, unique=False, nullable=False)
-    yellow_white_lipped_snail_0_bands = db.Column(db.Integer, unique=False, nullable=False)
-    pink_white_lipped_snail_0_bands = db.Column(db.Integer, unique=False, nullable=False)
-    brown_white_lipped_snail_0_bands = db.Column(db.Integer, unique=False, nullable=False)
-    yellow_white_lipped_snail_1_band = db.Column(db.Integer, unique=False, nullable=False)
-    pink_white_lipped_snail_1_band = db.Column(db.Integer, unique=False, nullable=False)
-    brown_white_lipped_snail_1_band = db.Column(db.Integer, unique=False, nullable=False)
-    yellow_white_lipped_snail_many_bands = db.Column(db.Integer, unique=False, nullable=False)
-    pink_white_lipped_snail_many_bands = db.Column(db.Integer, unique=False, nullable=False)
-    brown_white_lipped_snail_many_bands = db.Column(db.Integer, unique=False, nullable=False)
+    yellow_brown_lipped_snail_0_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    pink_brown_lipped_snail_0_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    brown_brown_lipped_snail_0_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    yellow_brown_lipped_snail_1_band = db.Column(
+        db.Integer, unique=False, nullable=False)
+    pink_brown_lipped_snail_1_band = db.Column(
+        db.Integer, unique=False, nullable=False)
+    brown_brown_lipped_snail_1_band = db.Column(
+        db.Integer, unique=False, nullable=False)
+    yellow_brown_lipped_snail_many_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    pink_brown_lipped_snail_many_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    brown_brown_lipped_snail_many_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    yellow_white_lipped_snail_0_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    pink_white_lipped_snail_0_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    brown_white_lipped_snail_0_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    yellow_white_lipped_snail_1_band = db.Column(
+        db.Integer, unique=False, nullable=False)
+    pink_white_lipped_snail_1_band = db.Column(
+        db.Integer, unique=False, nullable=False)
+    brown_white_lipped_snail_1_band = db.Column(
+        db.Integer, unique=False, nullable=False)
+    yellow_white_lipped_snail_many_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    pink_white_lipped_snail_many_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
+    brown_white_lipped_snail_many_bands = db.Column(
+        db.Integer, unique=False, nullable=False)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
