@@ -36,4 +36,21 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Edit confirmation
+    /**
+     * Adds a click event listener to all elements with the class 'edit-btn'.
+     * When an edit button is clicked, a confirmation dialog will appear.
+     * If the user clicks "Cancel", the default action of the event (following the link) is cancelled.
+     */
+    const editButtons = document.querySelectorAll('.edit-btn');
+    editButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+            const confirmation = confirm('Are you sure you want to edit this survey?');
+            if (!confirmation) {
+                event.preventDefault();
+            }
+        });
+    });
+
 });
