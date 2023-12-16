@@ -4,7 +4,7 @@
 <h1 class="light-green-text text-darken-4 center-align">Survey</h1>
 <div class="row">
   <div class="col s12 center-align">
-    <a href="{{ url_for('add_survey') }}" class="btn-large light-green darken-2">
+    <a href="{{ url_for('add_survey') }}" class="btn-large teal darken-1">
       Add Survey <i class="fa-solid fa-square-plus right"></i>
     </a>
   </div>
@@ -13,7 +13,7 @@
 <ul class="collapsible">
   {% for survey in surveys|sort(attribute="survey_date") %}
   <li>
-    <div class="collapsible-header white-text green darken-4">
+    <div class="collapsible-header white-text teal darken-5">
       <i class="fa-solid fa-caret-down"></i>
       <strong>{{ survey.survey_date.strftime("%d/%b/%Y") }}, {{ survey.survey_location }}, {{ survey.survey_recorder
         }}</strong>
@@ -87,7 +87,7 @@
           <td>{{ survey.brown_white_lipped_snail_many_bands }}</td>
         </tr>
       </table>
-      <a href="{{ url_for('edit_survey', survey_id=survey.survey_id) }}" class="btn green accent-4 edit-btn">Edit</a>
+      <a href="{{ url_for('edit_survey', survey_id=survey.survey_id) }}" class="btn teal darken-3 edit-btn">Edit</a>
       <a href="{{ url_for('delete_survey', survey_id=survey.survey_id) }}"
         class="btn red accent-4 delete-btn">Delete</a>
     </div>

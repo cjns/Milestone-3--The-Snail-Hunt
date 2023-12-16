@@ -53,4 +53,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Check if there are any flash messages
+    var flashMessage = document.getElementById('flash-message');
+    if (flashMessage) {
+        // Get the class name from the data-class attribute
+        var className = flashMessage.getAttribute('data-class');
+        // Display the toast
+        M.toast({html: flashMessage.textContent, classes: className});
+    }
+
 });

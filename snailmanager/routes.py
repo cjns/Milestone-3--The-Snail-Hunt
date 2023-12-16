@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from snailmanager import app, db
 from snailmanager.models import Survey  # User
 
@@ -65,6 +65,7 @@ def add_survey():
         )
         db.session.add(new_survey)
         db.session.commit()
+        flash('Survey added successfully', 'success-toast')
         return redirect(url_for("surveys"))
     return render_template("add_survey.html", surveys=surveys)
 
@@ -117,6 +118,7 @@ def edit_survey(survey_id):
         survey.brown_white_lipped_snail_many_bands = request.form.get(
             "brown_white_lipped_snail_many_bands")
         db.session.commit()
+        flash('Survey updated successfully', 'success-toast')
     return render_template("edit_survey.html", survey=survey)
 
 
@@ -126,4 +128,5 @@ def delete_survey(survey_id):
     survey = Survey.query.get_or_404(survey_id)
     db.session.delete(survey)
     db.session.commit()
+    flash('Survey deleted successfully', 'success-toast')
     return redirect(url_for("surveys"))

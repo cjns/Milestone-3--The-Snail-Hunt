@@ -10,42 +10,50 @@
     <title>Snail Hunt</title>
 </head>
 
-<body>
+<body class="teal lighten-5">
 
     <header>
-        <nav class="green darken-1">
+        <nav class="teal darken-3">
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">Snail Hunt</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}" class="white-text">Home</a></li>
                     <!-- <li><a href="">Register</a></li> -->
                     <!-- <li><a href="">Log in</a></li> -->
-                    <li><a href="{{ url_for('surveys') }}">Surveys</a></li>
-                    <li><a href="{{ url_for('add_survey') }}">Add Survey</a></li>
+                    <li><a href="{{ url_for('surveys') }}" class="white-text">Surveys</a></li>
+                    <li><a href="{{ url_for('add_survey') }}" class="white-text">Add Survey</a></li>
                     <!-- <li><a href="">Search</a></li> -->
                     <!-- <li><a href="">Export</a></li> -->
                 </ul>
             </div>
         </nav>
 
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
+        <ul class="sidenav teal lighten-5" id="mobile-demo">
+            <li><a href="{{ url_for('home') }}" class="teal-text text-darken-4">Home</a></li>
             <!-- <li><a href="">Register</a></li> -->
             <!-- <li><a href="">Log in</a></li> -->
-            <li><a href="{{ url_for('surveys') }}">Surveys</a></li>
-            <li><a href="{{ url_for('add_survey') }}">Add Survey</a></li>
+            <li><a href="{{ url_for('surveys') }}" class="teal-text text-darken-4">Surveys</a></li>
+            <li><a href="{{ url_for('add_survey') }}" class="teal-text text-darken-4">Add Survey</a></li>
             <!-- <li><a href="">Search</a></li> -->
             <!-- <li><a href="">Export</a></li> -->
         </ul>
     </header>
 
     <main class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div id="flash-message" data-class="{{ category }}" style="display: none;">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
         {% block content %}
         {% endblock %}
     </main>
 
-    <footer class="page-footer green darken-3">
+    <footer class="page-footer teal darken-3">
         <div class="footer-copyright">
             <div class="container">
                 For Educational Purposes Only

@@ -9,6 +9,11 @@ main {
   flex: 1 0 auto;
 }
 
+/* Brand Logo */
+.brand-logo {
+  margin-left: 10px;
+} 
+
 /* Headings */
 h1 {
   font-size: 2.2rem;
@@ -37,8 +42,25 @@ h6 {
 /* Tables */
 .snail_table {
   margin-bottom: 2rem;
+
+}
+
+.snail_table {
+  /* Dark teal text for contrast against the light teal background */
+  color: #004d40 !important;
 }
 
 .snail_table>caption {
   font-size: 1.5rem;
+}
+
+.edit-btn {
+  /* Add some space between the Edit and Delete buttons */
+  margin-right: 10px;
+}
+
+/* Toasts */
+.success-toast {
+  background-color: #00897b !important;
+  color: #FFFFFFE6 !important;
 }
