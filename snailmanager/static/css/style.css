@@ -12,7 +12,7 @@ main {
 /* Brand Logo */
 .brand-logo {
   margin-left: 10px;
-} 
+}
 
 /* Headings */
 h1 {
@@ -39,6 +39,12 @@ h6 {
   font-size: 1.2rem;
 }
 
+/* Paragraphs */
+
+p {
+  color: #004d40;
+}
+
 /* Tables */
 .snail_table {
   margin-bottom: 2rem;
@@ -48,10 +54,11 @@ h6 {
 .snail_table {
   /* Dark teal text for contrast against the light teal background */
   color: #004d40 !important;
-}
 
-.snail_table>caption {
-  font-size: 1.5rem;
+  & caption {
+    font-size: 1.5rem;
+  }
+
 }
 
 .edit-btn {
