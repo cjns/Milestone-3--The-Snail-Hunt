@@ -25,8 +25,8 @@
                     <li><a href="{{ url_for('add_survey') }}" class="white-text">Add Survey</a></li>
                     {% else %}
                     <!-- Show login / register when not logged in -->
-                    <li><a href="{{ url_for('login') }}">Log in</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Log in</a></li>
                     {% endif %}
                     <li><a href="{{ url_for('surveys') }}" class="white-text">Surveys</a></li>
                 </ul>
@@ -41,8 +41,8 @@
             <li><a href="{{ url_for('add_survey') }}" class="teal-text text-darken-4">Add Survey</a></li>
             {% else %}
             <!-- Show login / register when not logged in -->
-            <li><a href="{{ url_for('login') }}">Log in</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
             {% endif %}
             <li><a href="{{ url_for('surveys') }}" class="teal-text text-darken-4">Surveys</a></li>
         </ul>

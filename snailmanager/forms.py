@@ -40,9 +40,10 @@ class RegistrationForm(FlaskForm):
 
 # Form Login
 class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[
+    username = StringField('Username', validators=[
         DataRequired(),
-        Email(message='Enter a valid email.')
+        Length(min=3, max=25,
+               message='Username must be between 3 and 25 characters long.')
     ])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Log In')
