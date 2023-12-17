@@ -2,14 +2,18 @@
 {% block content %}
 
 <h1 class="light-green-text text-darken-4 center-align">403</h1>
+<!-- Get flashed messages -->
 {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class="flashes">
+<!-- Display the flashed message -->
+{% if messages %}
+<ul class="flashes">
     {% for message in messages %}
-      <li><h2 class="light-green-text text-darken-4 center-align">{{ message }}</h2></li>
+    <li>
+        <h2 class="light-green-text text-darken-4 center-align">{{ message }}</h2>
+    </li>
     {% endfor %}
-    </ul>
-  {% endif %}
+</ul>
+{% endif %}
 {% endwith %}
 
 {% endblock %}
