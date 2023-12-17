@@ -12,9 +12,22 @@ def home():
 
 
 # Error handlers
+# 403
 @app.errorhandler(403)
 def forbidden_error(error):
     return render_template('403.html'), 403
+
+
+# 404
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
+
+# 405
+@app.errorhandler(405)
+def method_not_allowed(error):
+    return render_template('405.html'), 405
 
 
 @app.route("/surveys")

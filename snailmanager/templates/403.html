@@ -1,19 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 class="light-green-text text-darken-4 center-align">403</h1>
-<!-- Get flashed messages -->
-{% with messages = get_flashed_messages() %}
-<!-- Display the flashed message -->
-{% if messages %}
-<ul class="flashes">
-    {% for message in messages %}
-    <li>
-        <h2 class="light-green-text text-darken-4 center-align">{{ message }}</h2>
-    </li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
+<div class="error-message">
+    <h1 class="light-green-text text-darken-4 center-align">403 Forbidden</h1>
+    <p>You do not have permission to access this page or perform this action.</p>
+    <p>This might be due to one of the following reasons:</p>
+    <ul>
+        <li>You are not logged in. <a href="{{ url_for('login') }}">Log in</a> to continue.</li>
+        <li>Your account may not have the necessary privileges to access this resource.</li>
+        <li>If you have recently changed your password, please ensure that you are logged in with the new credentials.</li>
+    </ul>
+    <p>If you think you should have access to this page, please contact our support team or your administrator for assistance.</p>
+</div>
 
 {% endblock %}

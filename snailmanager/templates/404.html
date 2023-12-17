@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="error-message">
+    <h1 class="light-green-text text-darken-4 center-align">404 Not Found</h1>
+    <p>Oops! The page you're looking for cannot be found. It might have been removed, had its name changed, or is temporarily unavailable.</p>
+    <p>Here's what you can do:</p>
+    <ul>
+        <li>Check the URL to ensure it is correct.</li>
+        <li>Use the search function to find the content you're looking for.</li>
+        <li>Return to the <a href="{{ url_for('home') }}">Home page</a>.</li>
+    </ul>
+    <p>If you believe this page should exist, please contact our support team.</p>
+</div>
+
+{% endblock %}
