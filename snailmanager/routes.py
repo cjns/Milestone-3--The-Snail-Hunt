@@ -88,7 +88,7 @@ def edit_survey(survey_id):
     survey = Survey.query.get_or_404(survey_id)
     # Ensure user is the owner of the survey
     if survey.user_id != current_user.id:
-        flash('You are not authorized to edit this survey.', 'error-toast')
+        flash('You are not authorised to edit this survey.', 'error-toast')
         abort(403)  # HTTP 403 forbidden
     if request.method == "POST":
         # Retrieve form data
@@ -144,7 +144,7 @@ def edit_survey(survey_id):
 def delete_survey(survey_id):
     survey = Survey.query.get_or_404(survey_id)
     if survey.user_id != current_user.id:
-        flash('You are not authorized to delete this survey.', 'error-toast')
+        flash('You are not authorised to delete this survey.', 'error-toast')
         abort(403)  # HTTP 403 forbidden
     db.session.delete(survey)
     db.session.commit()
