@@ -165,32 +165,56 @@ The following metrics can be measured to track the website's success:
 
 # Design Choices
 ## Sitemap
+- Home
+- Register
+- Login
+- Logout
+- Add Survey
+- Surveys
+   - Add Survey
+   - Edit Survey
+   - Delete Survey
 
 ## Wireframes
+![home.html](assets/images/wireframe-home.webp)
+![login.html](assets/images/wireframe-login.webp)
+![register.html](assets/images/wireframe-register.webp)
+![surveys.html](assets/images/wireframe-surveys.webp)
+![add_surveys.html](assets/images/wireframe-add-surveys.webp)
 
 ## Colours
 Pros:
 Cons:
 
 ## Typography / Fonts
-Headings & Titles:
-Subheadings:
-Body:
+I decided to stick with the Materialize CSS theme to keep everything coherent.
 Pros:
+- Consistency: Ensure a consistent look and feel.
+- Compatibility: Designed to be compatible with a wide range of devices.
+- Performance: System fonts, which have faster loading times.
+- Maintenance: Do not need to worry about hosting font files.
 Cons:
+- Lack of uniqueness: Will not stand out as much.
+- Limited Control: Less control of the appearance.
+- Potential Inconsistencies: System fonts can vary between different operating systems.
 
 ## Icons
+Icons are taken from [fontawesome's](https://fontawesome.com/) free selection.
 
 ## Styling
+- Minimal and clean with teal/green colours that are associate with nature.
+- Error alerts will use a red palette since it is associate with danger/warnings.
 
 # Technologies
-- HTML
-- CSS
-- JavaScript
-- Materialize CSS
-- Python
-- Flash
-- Jinja
+- [HTML](https://html.spec.whatwg.org/multipage/)
+- [CSS](https://www.w3.org/Style/CSS/)
+- [Materialize CSS](https://materializecss.com/)
+- [JavaScript](https://tc39.es/)
+- [Python](https://www.python.org/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [SQLAlchemy](https://www.sqlalchemy.org/)
 
 # Other Resources
 - [Am I Responsive](https://ui.dev/amiresponsive/): Images of responsive design.
@@ -202,23 +226,16 @@ Cons:
 - [Git](https://git-scm.com/): For version control and pushing to Github.
 - [GitHub](https://github.com/): To store projects in a public repository.
 - [GitHub Desktop](https://desktop.github.com/): Desktop software to simplify the Git/Github development workflow.
-- [Google Fonts](https://fonts.google.com/): Fonts.
-- [Google Variable Fonts](https://fonts.google.com/variablefonts): Variable Fonts.
-- [Google Fonts Knowledge](https://fonts.google.com/knowledge/): Typography Knowledge. 
-- [Jest](https://jestjs.io/): JavaScript testing.
 - [JSHint](https://jshint.com): JavaScript testing.
-- [mycolor.space](https://mycolor.space/?hex=%23A9D6BB&sub=1): For colours.
 - [Web accessibility evaluation tool (WAVE)](https://wave.webaim.org/): For testing site accessibility quality.
 - [WebP Converter](https://developers.google.com/speed/webp): Converting images to the WebP format.
 - [VSCode](https://code.visualstudio.com/): Coding text editor.
-- [SQLAlchemy](https://docs.sqlalchemy.org/)
 - Real Python:
    - [User Management](https://realpython.com/using-flask-login-for-user-management-with-flask/)
    - [Setting up a static site](https://realpython.com/introduction-to-flask-part-1-setting-up-a-static-site/)
 - Digital Ocean:
    - [How To Add Authentication to Your App with Flask-Login](https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login)
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/3.0.x/utils/)
-- [Flask Documentation](https://flask.palletsprojects.com/en/3.0.x/)
 
 # Testing
 Please visit the [testing](./testing.md) file.
@@ -232,3 +249,6 @@ Please visit the [testing](./testing.md) file.
 # Credits
 ## Code
 ## Acknowledgements
+- Graeme Taylor: Code Institute Mentor.
+- Callum Jones: Course Facilitator at [Newcastle College University Centre](https://www.ncl-coll.ac.uk/)
+- [Code Institute](https://codeinstitute.net/) for their learning resources.
