@@ -39,7 +39,8 @@ def internal_error(error):
 
 @app.route("/surveys")
 def surveys():
-    surveys = Survey.query.options(joinedload(Survey.user)).order_by(Survey.survey_date).all()
+    surveys = Survey.query.options(joinedload(
+        Survey.user)).order_by(Survey.survey_date).all()
     return render_template("surveys.html", surveys=surveys)
 
 
@@ -201,8 +202,7 @@ def login():
             flash('Welcome back, {}!'.format(user.username), 'success-toast')
             return redirect(next_page or url_for('home'))
         else:
-            flash(
-                'Login Unsuccessful. Please check username and password.', 'error-toast')
+            flash('Login Failed. Check username and password.', 'error-toast')
     return render_template('login.html', title='Log In', form=form)
 
 

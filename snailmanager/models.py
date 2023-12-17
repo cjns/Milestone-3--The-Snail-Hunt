@@ -85,22 +85,22 @@ class Survey(db.Model):
             Survey Location: {self.survey_location}
             Survey Habitat: {self.survey_habitat}
             Survey Recorder: {self.survey_recorder}
-            Yellow, Brown Lipped Snail, 0 Bands: {self.yellow_brown_lipped_snail_0_bands}
-            Pink, Brown Lipped Snail, 0 Bands: {self.pink_brown_lipped_snail_0_bands}
-            Brown, Brown Lipped Snail, 0 Bands: {self.brown_brown_lipped_snail_0_bands}
-            Yellow, Brown Lipped Snail, 1 Band: {self.yellow_brown_lipped_snail_1_band}
-            Pink, Brown Lipped Snail, 1 Band: {self.pink_brown_lipped_snail_1_band}
-            Brown, Brown Lipped Snail, 1 Band: {self.brown_brown_lipped_snail_1_band}
-            Yellow, Brown Lipped Snail, Many Bands: {self.yellow_brown_lipped_snail_many_bands}
-            Pink, Brown Lipped Snail, Many Bands: {self.pink_brown_lipped_snail_many_bands}
-            Brown, Brown Lipped Snail, Many Bands: {self.brown_brown_lipped_snail_many_bands}
-            Yellow, White Lipped Snail, 0 Bands: {self.yellow_white_lipped_snail_0_bands}
-            Pink, White Lipped Snail, 0 Bands: {self.pink_white_lipped_snail_0_bands}
-            Brown, White Lipped Snail, 0 Bands: {self.brown_white_lipped_snail_0_bands}
-            Yellow, White, Lipped Snail, 1 Band: {self.yellow_white_lipped_snail_1_band}
-            Pink, White Lipped Snail, 1 Band: {self.pink_white_lipped_snail_1_band}
-            Brown, White Lipped Snail, 1 Band: {self.brown_white_lipped_snail_1_band}
-            Yellow, White Lipped Snail, Many Bands: {self.yellow_white_lipped_snail_many_bands}
-            Pink, White Lipped Snail, Many Bands: {self.pink_white_lipped_snail_many_bands}
-            Brown, White Lipped Snail, Many Bands: {self.brown_white_lipped_snail_many_bands}
+            Yel Br-Lipped 0 Bands: {self.yellow_brown_lipped_snail_0_bands}
+            Pink Br-Lipped 0 Bands: {self.pink_brown_lipped_snail_0_bands}
+            Br Br-Lipped 0 Bands: {self.brown_brown_lipped_snail_0_bands}
+            Yel Br-Lipped 1 Band: {self.yellow_brown_lipped_snail_1_band}
+            Pink Br-Lipped 1 Band: {self.pink_brown_lipped_snail_1_band}
+            Br Br-Lipped 1 Band: {self.brown_brown_lipped_snail_1_band}
+            Yel Br-Lipped >1 Bands: {self.yellow_brown_lipped_snail_many_bands}
+            Pink Br-Lipped >1 Bands: {self.pink_brown_lipped_snail_many_bands}
+            Br Br-Lipped >1 Bands: {self.brown_brown_lipped_snail_many_bands}
+            Yel Wh-Lipped 0 Bands: {self.yellow_white_lipped_snail_0_bands}
+            Pink Wh-Lipped 0 Bands: {self.pink_white_lipped_snail_0_bands}
+            Br Wh-Lipped 0 Bands: {self.brown_white_lipped_snail_0_bands}
+            Yel Wh-Lipped 1 Band: {self.yellow_white_lipped_snail_1_band}
+            Pink Wh-Lipped 1 Band: {self.pink_white_lipped_snail_1_band}
+            Br Wh-Lipped 1 Band: {self.brown_white_lipped_snail_1_band}
+            Yel Wh-Lipped >1 Bands: {self.yellow_white_lipped_snail_many_bands}
+            Pink Wh-Lipped >1 Bands: {self.pink_white_lipped_snail_many_bands}
+            Br Wh-Lipped >1 Bands: {self.brown_white_lipped_snail_many_bands}
         """
