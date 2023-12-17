@@ -76,7 +76,7 @@ def add_survey():
         )
         db.session.add(new_survey)
         db.session.commit()
-        flash('Survey added successfully', 'success-toast')
+        flash('Survey added successfully.', 'success-toast')
         return redirect(url_for("surveys"))
     return render_template("add_survey.html", surveys=surveys)
 
@@ -88,7 +88,7 @@ def edit_survey(survey_id):
     survey = Survey.query.get_or_404(survey_id)
     # Ensure user is the owner of the survey
     if survey.user_id != current_user.id:
-        flash('You are not authorized to edit this survey.', 'danger')
+        flash('You are not authorized to edit this survey.', 'error-toast')
         abort(403)  # HTTP 403 forbidden
     if request.method == "POST":
         # Retrieve form data
@@ -134,7 +134,7 @@ def edit_survey(survey_id):
         survey.brown_white_lipped_snail_many_bands = request.form.get(
             "brown_white_lipped_snail_many_bands")
         db.session.commit()
-        flash('Survey updated successfully', 'success-toast')
+        flash('Survey updated successfully.', 'success-toast')
     return render_template("edit_survey.html", survey=survey)
 
 
@@ -144,11 +144,11 @@ def edit_survey(survey_id):
 def delete_survey(survey_id):
     survey = Survey.query.get_or_404(survey_id)
     if survey.user_id != current_user.id:
-        flash('You are not authorized to delete this survey.', 'danger')
+        flash('You are not authorized to delete this survey.', 'error-toast')
         abort(403)  # HTTP 403 forbidden
     db.session.delete(survey)
     db.session.commit()
-    flash('Survey deleted successfully', 'success-toast')
+    flash('Survey deleted successfully.', 'success-toast')
     return redirect(url_for("surveys"))
 
 
@@ -180,7 +180,7 @@ def login():
             # Replace 'index' with your homepage endpoint
             return redirect(next_page or url_for('home'))
         else:
-            flash('Login Unsuccessful. Please check email and password', 'danger')
+            flash('Login Unsuccessful. Please check email and password.', 'error-toast')
     return render_template('login.html', title='Log In', form=form)
 
 

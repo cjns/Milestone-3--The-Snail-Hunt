@@ -4,21 +4,21 @@ document.addEventListener('DOMContentLoaded', function () {
     M.Sidenav.init(sidenav);
 
     // Date Picker
-    var datepicker = document.querySelectorAll('.datepicker');
+    let datepicker = document.querySelectorAll('.datepicker');
     M.Datepicker.init(datepicker, {
         format: "dd mmmm, yyyy",
         i18n: { done: "Ok" }
     });
 
     // Time Picker
-    var timepicker = document.querySelectorAll('.timepicker');
+    let timepicker = document.querySelectorAll('.timepicker');
     M.Timepicker.init(timepicker, {
         twelveHour: false, // Use 24-hour format
         i18n: { done: "Ok" }
     });
 
     // Collapsibles
-    var collapsibles = document.querySelectorAll('.collapsible');
+    let collapsibles = document.querySelectorAll('.collapsible');
     M.Collapsible.init(collapsibles);
 
     // Delete confirmation
@@ -67,13 +67,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Check if there are any flash messages
-    var flashMessage = document.getElementById('flash-message');
-    if (flashMessage) {
-        // Get the class name from the data-class attribute
-        var className = flashMessage.getAttribute('data-class');
-        // Display the toast
-        M.toast({ html: flashMessage.textContent, classes: className });
-    }
+    // Display flash messages as toasts
+    /**
+     * This function selects all hidden input elements with the class 'flash-message'.
+     * For each element, it extracts the data-message and data-class attributes
+     * and uses them to display a toast via Materialize's toast mechanism.
+     */
+    let flashMessages = document.querySelectorAll('.flash-message');
+    flashMessages.forEach((flashMessage) => {
+        let message = flashMessage.dataset.message;
+        let className = flashMessage.dataset.class; // Use the data attributes set in the HTML
+        M.toast({ html: message, classes: className, displayLength: 5000});
+    });
 
 });

@@ -72,6 +72,11 @@ p {
   color: #FFFFFFE6 !important;
 }
 
+.error-toast {
+  background-color: #b71c1c !important;
+  color: #FFFFFFE6 !important;
+}
+
 /* Links */
 a.hunt-snails {
   color: #004d40;
