@@ -19,10 +19,13 @@ db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'  # Specify the route name of your login view
 
+
 # User loader function for Flask-Login
 @login_manager.user_loader
 def load_user(user_id):
-    from snailmanager.models import User  # Import inside function to avoid circular imports
+    # Import inside function to avoid circular imports
+    from snailmanager.models import User
     return User.query.get(int(user_id))
+
 
 from snailmanager import routes  # noqa

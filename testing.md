@@ -1,5 +1,5 @@
 # Testing
-
+## Tools
 The following tools were used for testing:
 
 - HTML: [W3C Markup Validator](https://validator.w3.org/)
@@ -9,15 +9,30 @@ The following tools were used for testing:
 - Python Syntax: [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
 - JS Syntax: [ESLint](https://eslint.org/)
 
+## Testing Client Stories
+|Opportunity/Problem|Evidence of meeting user story|
+|-|-|
+|Understand what the site is for|[Home page]()|
+|Find out more information about the site's purpose|[Link to external resources]()|
+|Create surveys|[Add a survey]()|
+|View surveys|[View surveys]()|
+|Update surveys||
+|Delete your surveys||
+|Register for an account||
+|Log in to your account||
+|Log out of your account||
+|Contact someone for support||
+
 ## HTML, Accessibility, & Performance
 |Page|HTML|Lighthouse Mobile|Lighthouse Desktop|
 |-|-|-|-|
-|Home||||
-|Log in||||
-|Register||||
-|Surveys||||
-|Add Survey||||
-|Edit Survey||||
+|Home|[Valid*](https://validator.w3.org/)|||
+|Log in|[Valid*](https://validator.w3.org/)|||
+|Register|[Valid*](https://validator.w3.org/)|||
+|Surveys|[Valid*](https://validator.w3.org/)|||
+|Add Survey|[Valid*](https://validator.w3.org/)|||
+|Edit Survey|[Valid*](https://validator.w3.org/)|||
+* Errors/warnings relate to Jinja templates only.
 
 ## Accessibility
 |Page|Wave Validation|
@@ -32,12 +47,13 @@ The following tools were used for testing:
 ## CSS
 |File|Validation|
 |-|-|
-|style.css|-|
+|style.css|[Valid, no error found](https://jigsaw.w3.org/css-validator/#validate_by_uri)|
 
 ## JavaScript
 |File|Validation|
 |-|-|
-|script.js|-|
+|script.js|[Valid*](assets/images/js-valid.webp)|
+*'M' refers to the global object for Materialize.
 
 ## Python
 |File|Valid|

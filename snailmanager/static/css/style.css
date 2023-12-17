@@ -58,11 +58,10 @@ p {
 .snail_table {
   /* Dark teal text for contrast against the light teal background */
   color: #004d40 !important;
+}
 
-  & caption {
-    font-size: 1.5rem;
-  }
-
+.snail_table.caption {
+  font-size: 1.5rem;
 }
 
 .edit-btn {
