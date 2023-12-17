@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="error-message">
+    <h1 class="light-green-text text-darken-4 center-align">500 Internal Server Error</h1>
+    <p>We're sorry, but something went wrong on our end. Please try again later.</p>
+    <p>If you are the application owner, check the server logs for more information about the error.</p>
+    <p>Here's what you can do:</p>
+    <ul>
+        <li>Hit the <strong>refresh</strong> button on your browser.</li>
+        <li>Return to the <a href="{{ url_for('home') }}">Home page</a>.</li>
+    </ul>
+    <p>If the problem persists, please contact support.</p>
+</div>
+
+{% endblock %}

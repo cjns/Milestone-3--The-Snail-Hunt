@@ -12,22 +12,28 @@ def home():
 
 
 # Error handlers
-# 403
+# Error handler for 403 Forbidden
 @app.errorhandler(403)
 def forbidden_error(error):
     return render_template('403.html'), 403
 
 
-# 404
+# Error handler for 404 Not Found
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('404.html'), 404
 
 
-# 405
+# Error handler for 405 Method Not Allowed
 @app.errorhandler(405)
 def method_not_allowed(error):
     return render_template('405.html'), 405
+
+
+# Error handler for 500 Internal Server Error
+@app.errorhandler(500)
+def internal_error(error):
+    return render_template('500.html'), 500
 
 
 @app.route("/surveys")
@@ -193,7 +199,8 @@ def login():
             next_page = request.args.get('next')
             return redirect(next_page or url_for('home'))
         else:
-            flash('Login Unsuccessful. Please check username and password.', 'error-toast')
+            flash(
+                'Login Unsuccessful. Please check username and password.', 'error-toast')
     return render_template('login.html', title='Log In', form=form)
 
 
