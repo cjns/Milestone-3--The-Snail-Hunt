@@ -1,7 +1,7 @@
 # Milestone 3: The Snail Hunt
 This is a platform that allows users to enter data they have gathered about the Brown lipped snail and White lipped snail for the Evolution MegaLab study.
 
-You can read more about the Evolution MegaLab study here.
+You can read more about the [Evolution MegaLab study here](https://www.stem.org.uk/resources/collection/4114/evolution-megalab).
 
 # User Experience (UX)
 ## Project Goals
@@ -29,8 +29,12 @@ As a first time user:
 As a returning registered user:
 
 - Log in to my account.
+- Log out of my account.
 - Create, view, update, and delete my entries.
 - Search all entries.
+- Export data to csv.
+- See and edit my profile.
+- Contact someone for support.
 
 ## Strategic Tradeoffs
 
@@ -39,13 +43,15 @@ I have assigned a score out of five (5) to the importance and viability / feasib
 ---
 |Opportunity / Problem|Importance|Viability / Feasibility|Result|Possible Solution|
 |-|-|-|-|-|
-|Understand what the site is for.|1|1|Will be addressed.|Include an introduction on the main page.|
-|Find out more information about the site's purpose.|1|1|Will be addressed.|Include a separate page that provides more information about the study.|
-|Create, view, update, and delete my entries.|1|1|Will be addressed.|Use the Flask Framework and Postgresql to store and manipulate information.|
-|Register for an account.|1||||
-|Log in to my account.|1||||
-|Search all entries.|1||||
-|Export data to a spread sheet.|1||||
+|Understand what the site is for|5|5|Will be addressed.|Include an introduction on the main page.|
+|Find out more information about the site's purpose|5|5|Will be addressed.|Include a separate page that provides more information about the study.|
+|Create, view, update, and delete my entries|5|5|Will be addressed.|Use the Flask Framework and Postgresql to store and manipulate information.|
+|Register for an account|5|5|Will be addressed.|Include a registration page.|
+|Log in to my account|5|5|Will be addressed.|Include a login page.|
+|Log out of my account|5|5|Will be addressed.|Include a logout link.|
+|Search all entries|5|1|Future implementation.|Currently out of scope.|
+|Export data to a spread sheet|5|1|Future implementation.|Currently out of scope.|
+|See and edit my profile|5|1|Future implementation.|Currently out of scope.|
 
 # Features
 > 'What are we going to make?'
@@ -58,8 +64,12 @@ Problem it addresses: Understand what the site is for.
 2. A page with additional information about the study.
 Problem it addresses: Find out more information about the site's purpose.
 
-3. A page to add/modify a record.
+3. A page to add/modify a survey.
 Problem it addresses: Create, view, update, and delete my entries.
+
+4. A page to register an account.
+5. A page to login.
+6. A link to logout.
 
 
 ## Database

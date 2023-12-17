@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, abort
 from flask_login import login_user, logout_user, current_user, login_required
 from snailmanager import app, db
 from snailmanager.forms import RegistrationForm, LoginForm
@@ -19,11 +19,13 @@ def surveys():
 
 # Add survey
 @app.route("/add_survey", methods=["GET", "POST"])
+@login_required
 def add_survey():
     surveys = list(Survey.query.order_by(Survey.survey_date).all())
     if request.method == "POST":
         # Retrieve form data
         new_survey = Survey(
+            user_id=current_user.id,
             survey_date=request.form.get("survey_date"),
             survey_time=request.form.get("survey_time"),
             survey_location=request.form.get("survey_location"),
@@ -75,8 +77,13 @@ def add_survey():
 
 # Edit survey
 @app.route("/edit_survey/<int:survey_id>", methods=["GET", "POST"])
+@login_required
 def edit_survey(survey_id):
     survey = Survey.query.get_or_404(survey_id)
+    # Ensure user is the owner of the survey
+    if survey.user_id != current_user.id:
+        flash('You are not authorized to edit this survey', 'danger')
+        abort(403)  # HTTP 403 forbidden
     if request.method == "POST":
         # Retrieve form data
         survey.survey_date = request.form.get("survey_date"),
@@ -127,8 +134,12 @@ def edit_survey(survey_id):
 
 # Delete survey
 @app.route("/delete_survey/<int:survey_id>")
+@login_required
 def delete_survey(survey_id):
     survey = Survey.query.get_or_404(survey_id)
+    if survey.user_id != current_user.id:
+        flash('You are not authorized to edit this survey', 'danger')
+        abort(403)  # HTTP 403 forbidden
     db.session.delete(survey)
     db.session.commit()
     flash('Survey deleted successfully', 'success-toast')
