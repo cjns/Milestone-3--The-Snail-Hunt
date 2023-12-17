@@ -4,6 +4,7 @@ from snailmanager import app, db
 from snailmanager.forms import RegistrationForm, LoginForm
 from snailmanager.models import Survey, User
 from werkzeug.security import generate_password_hash
+from sqlalchemy.orm import joinedload
 
 
 @app.route("/")
@@ -38,7 +39,7 @@ def internal_error(error):
 
 @app.route("/surveys")
 def surveys():
-    surveys = list(Survey.query.order_by(Survey.survey_date).all())
+    surveys = Survey.query.options(joinedload(Survey.user)).order_by(Survey.survey_date).all()
     return render_template("surveys.html", surveys=surveys)
 
 

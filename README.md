@@ -211,6 +211,14 @@ Cons:
 - [Web accessibility evaluation tool (WAVE)](https://wave.webaim.org/): For testing site accessibility quality.
 - [WebP Converter](https://developers.google.com/speed/webp): Converting images to the WebP format.
 - [VSCode](https://code.visualstudio.com/): Coding text editor.
+- [SQLAlchemy](https://docs.sqlalchemy.org/)
+- Real Python:
+   - [User Management](https://realpython.com/using-flask-login-for-user-management-with-flask/)
+   - [Setting up a static site](https://realpython.com/introduction-to-flask-part-1-setting-up-a-static-site/)
+- Digital Ocean:
+   - [How To Add Authentication to Your App with Flask-Login](https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login)
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/3.0.x/utils/)
+- [Flask Documentation](https://flask.palletsprojects.com/en/3.0.x/)
 
 # Testing
 Please visit the [testing](./testing.md) file.

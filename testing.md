@@ -109,10 +109,26 @@ Flask cannot find the id attribute. Update 'user_id' to 'id' in models.py.
 
 ### 4
 #### Description
-Console error. Returning null because logout is not visible unless logged in.
+Console error: Returning null because logout is not visible unless logged in.
 #### Error:
 'script.js:63 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
     at HTMLDocument.<anonymous> (script.js:63:16)
 (anonymous) @ script.js:63'
 ### Fix:
 Check that the logoutLink exists before activating the event listener.
+
+### 5
+#### Description
+Console error.
+#### Error:
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+#### Fix:
+Unknown.
+
+### 6
+#### Description
+Console error.
+#### Error:
+The resource <URL> was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+#### Fix:
+Unknown.
