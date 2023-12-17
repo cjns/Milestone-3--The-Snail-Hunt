@@ -16,8 +16,12 @@
         <nav class="teal darken-3" role="navigation" aria-label="Main Navigation">
             <div class="nav-wrapper">
                 <span class="brand-logo">Snail Hunt</span>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger" aria-label="Open navigation menu"><i class="fa-solid fa-bars"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger" aria-label="Open navigation menu"><i
+                        class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
+                    {% if current_user.is_authenticated %}
+                    <li><span class="user-greeting">User: {{ current_user.username }}</span></li>
+                    {% endif %}
                     <li><a href="{{ url_for('home') }}" class="white-text">Home</a></li>
                     {% if current_user.is_authenticated %}
                     <!-- Show logout when user is logged in -->
@@ -51,11 +55,11 @@
     <main class="container">
         <div id="flash-messages">
             {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <input type="hidden" class="flash-message" data-class="{{ category }}" data-message="{{ message }}">
-                    {% endfor %}
-                {% endif %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <input type="hidden" class="flash-message" data-class="{{ category }}" data-message="{{ message }}">
+            {% endfor %}
+            {% endif %}
             {% endwith %}
         </div>
 

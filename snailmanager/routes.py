@@ -197,6 +197,7 @@ def login():
         if user and user.verify_password(form.password.data):
             login_user(user)
             next_page = request.args.get('next')
+            flash('Welcome back, {}!'.format(user.username), 'success-toast')
             return redirect(next_page or url_for('home'))
         else:
             flash(

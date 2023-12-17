@@ -1,3 +1,7 @@
+.user-greeting {
+  margin-right: 1rem;
+}
+
 /* Sticky Footer  */
 body {
   display: flex;
