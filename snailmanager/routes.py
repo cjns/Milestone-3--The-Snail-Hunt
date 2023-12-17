@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, url_for, flash
-from flask_login import login_user
+from flask_login import login_user, logout_user, current_user, login_required
 from snailmanager import app, db
 from snailmanager.forms import RegistrationForm, LoginForm
 from snailmanager.models import Survey, User
@@ -165,3 +165,10 @@ def login():
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Log In', form=form)
+
+
+# Logout
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('login'))

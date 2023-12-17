@@ -19,8 +19,14 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}" class="white-text">Home</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% if current_user.is_authenticated %}
+                    <!-- Show logout when user is logged in -->
+                    <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                    {% else %}
+                    <!-- Show login / register when not logged in -->
                     <li><a href="{{ url_for('login') }}">Log in</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
                     <li><a href="{{ url_for('surveys') }}" class="white-text">Surveys</a></li>
                     <li><a href="{{ url_for('add_survey') }}" class="white-text">Add Survey</a></li>
                 </ul>
@@ -31,6 +37,7 @@
             <li><a href="{{ url_for('home') }}" class="teal-text text-darken-4">Home</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('login') }}">Log in</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
             <li><a href="{{ url_for('surveys') }}" class="teal-text text-darken-4">Surveys</a></li>
             <li><a href="{{ url_for('add_survey') }}" class="teal-text text-darken-4">Add Survey</a></li>
         </ul>
