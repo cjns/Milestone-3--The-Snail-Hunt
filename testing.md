@@ -1,22 +1,72 @@
 # Testing
-## Links
-- Nav
-    - Home
-    - Surveys
-    - Add Survey
 
-- Home page
-    - Snail hunt logo.
-    - How to hunt banded snails link.
+The following tools were used for testing:
 
-## Buttons
-Surveys.html
-- Add Survey
+- HTML: [W3C Markup Validator](https://validator.w3.org/)
+- CSS: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- Accessibility: [WAVE (Web Accessibility Evaluation Tool)](https://wave.webaim.org/)
+- Performance: [Lighthouse (Within Chrome Developer Tools)](https://developer.chrome.com/docs/lighthouse/overview/)
+- Python Syntax: [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+- JS Syntax: [ESLint](https://eslint.org/)
 
-add_survey.html
-- Add Survey
+## HTML, Accessibility, & Performance
+|Page|HTML|Lighthouse Mobile|Lighthouse Desktop|
+|-|-|-|-|
+|Home||||
+|Log in||||
+|Register||||
+|Surveys||||
+|Add Survey||||
+|Edit Survey||||
 
-## add_survey.html
+## Accessibility
+|Page|Wave Validation|
+|-|-|
+|Home||
+|Login||
+|Register||
+|Surveys||
+|Add Survey||
+|Edit Survey||
+
+## CSS
+|File|Validation|
+|-|-|
+|style.css|-|
+
+## JavaScript
+|File|Validation|
+|-|-|
+|script.js|-|
+
+## Python
+|File|Valid|
+|-|-|
+|forms.py|-|
+|models.py|-|
+|routes.py|-|
+|run.py|-|
+|__init__.py|-|
+
+## Nav & Footer Links
+|Link|Expected Outcome|Testing|Result|Pass/Fail|
+|-|-|-|-|-|
+|Home|-|-|-|-|
+|Login|-|-|-|-|
+|Register|-|-|-|-|
+|Surveys|-|-|-|-|
+|Add Survey|-|-|-|-|
+|Email for support|-|-|-|-|
+
+## Home page
+|Feature|Expected Outcome|Testing|Result|Pass/Fail|
+|-|-|-|-|-|-|
+|Link: How to hunt banded snails|-|-|-|-|-|
+
+## Log in (login.html)
+## Register (register.html)
+## Surveys (surveys.html)
+## Add Survey (add_survey.html)
 - Date
 - Time
 - Location
@@ -28,12 +78,6 @@ add_survey.html
 - White lipped snail, 0 bands
 - White lipped snail, 1 band
 - White lipped snail, many bands
-
-## registration.html
-- All fields required to make a submission.
-- 
-
-## login.html
 
 ## Bugs
 ### 1
