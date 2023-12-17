@@ -11,10 +11,6 @@ class RegistrationForm(FlaskForm):
         Length(min=3, max=25,
                message='Username must be between 3 and 25 characters long.')
     ])
-    email = StringField('Email', validators=[
-        DataRequired(),
-        Email(message='Enter a valid email.')
-    ])
     password = PasswordField('Password', validators=[
         DataRequired(),
         Length(min=6, message='Password must be at least 6 characters long.')
@@ -30,12 +26,6 @@ class RegistrationForm(FlaskForm):
         if user:
             raise ValidationError(
                 'Username is already taken. Please choose a different one.')
-
-    def validate_email(self, email):
-        user = User.query.filter_by(email=email.data).first()
-        if user:
-            raise ValidationError(
-                'Email is already in use. Please choose a different one.')
 
 
 # Form Login

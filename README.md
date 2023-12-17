@@ -35,6 +35,7 @@ As a returning registered user:
 - Export data to csv.
 - See and edit my profile.
 - Contact someone for support.
+- Reset password
 
 ## Strategic Tradeoffs
 
@@ -53,6 +54,7 @@ I have assigned a score out of five (5) to the importance and viability / feasib
 |Export data to a spread sheet|5|1|Future implementation.|Currently out of scope.|
 |See and edit my profile|5|1|Future implementation.|Currently out of scope.|
 |Contact someone for support|5|5|Will be addressed.|Add an email address in the footer.|
+|Reset password|5|1|Future implementation.|Add the ability to reset a password via email.|
 
 ## Features
 > 'What are we going to make?'
@@ -102,7 +104,7 @@ Problem(s) it addresses:
 
 ## Database
 ### ERD Components
-A 'Student' can have multiple 'SnailObservation' records. This is a one-to-many relationship.
+A 'Student' can have multiple surveys. This is a one-to-many relationship.
 
 1. Entity: User
    - Attributes:
@@ -147,9 +149,12 @@ Problem(s) it addresses:
 Problem(s) it addresses:
 - Export data to a spread sheet.
 
+### The ability to reset a password via email
+Problem(s) it addresses:
+- Reset password.
+
 ## Success Metrics
 The following metrics can be measured to track the website's success:
-
 - Google Analytics.
 - Search engine listings.
 

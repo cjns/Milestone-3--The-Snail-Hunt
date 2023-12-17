@@ -106,3 +106,13 @@ NotImplementedError
 NotImplementedError: No `id` attribute - override `get_id`
 #### Fix:
 Flask cannot find the id attribute. Update 'user_id' to 'id' in models.py.
+
+### 4
+#### Description
+Console error. Returning null because logout is not visible unless logged in.
+#### Error:
+'script.js:63 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+    at HTMLDocument.<anonymous> (script.js:63:16)
+(anonymous) @ script.js:63'
+### Fix:
+Check that the logoutLink exists before activating the event listener.

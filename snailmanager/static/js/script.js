@@ -60,12 +60,14 @@ document.addEventListener('DOMContentLoaded', function () {
      * If the user clicks "Cancel", the default action of the event (logging out) is cancelled.
      */
     const logoutLink = document.querySelector('.logout');
-    logoutLink.addEventListener('click', (event) => {
-        const confirmation = confirm('Are you sure you want to logout?');
-        if (!confirmation) {
-            event.preventDefault();
-        }
-    });
+    if (logoutLink) {
+        logoutLink.addEventListener('click', (event) => {
+            const confirmation = confirm('Are you sure you want to logout?');
+            if (!confirmation) {
+                event.preventDefault();
+            }
+        });
+    }
 
     // Display flash messages as toasts
     /**
@@ -77,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
     flashMessages.forEach((flashMessage) => {
         let message = flashMessage.dataset.message;
         let className = flashMessage.dataset.class; // Use the data attributes set in the HTML
-        M.toast({ html: message, classes: className, displayLength: 5000});
+        M.toast({ html: message, classes: className, displayLength: 5000 });
     });
 
 });

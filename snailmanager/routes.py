@@ -158,12 +158,11 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password = generate_password_hash(form.password.data)
-        user = User(username=form.username.data,
-                    email=form.email.data, password_hash=hashed_password)
+        user = User(username=form.username.data, password_hash=hashed_password)
         db.session.add(user)
         db.session.commit()
         flash('Account created successfully! You can now log in.', 'success')
-        return redirect(url_for('login'))  # Assuming you have a 'login' view.
+        return redirect(url_for('login'))
 
     return render_template('register.html', title='Register', form=form)
 
@@ -173,14 +172,13 @@ def register():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data).first()
+        user = User.query.filter_by(username=form.username.data).first()
         if user and user.verify_password(form.password.data):
             login_user(user)
             next_page = request.args.get('next')
-            # Replace 'index' with your homepage endpoint
             return redirect(next_page or url_for('home'))
         else:
-            flash('Login Unsuccessful. Please check email and password.', 'error-toast')
+            flash('Login Unsuccessful. Please check username and password.', 'error-toast')
     return render_template('login.html', title='Log In', form=form)
 
 
