@@ -32,6 +32,11 @@ The following tools were used for testing:
 |Surveys|[Valid*](https://validator.w3.org/)|||
 |Add Survey|[Valid*](https://validator.w3.org/)|||
 |Edit Survey|[Valid*](https://validator.w3.org/)|||
+|403||||
+|404||||
+|405||||
+|500||||
+|Base||||
 * Errors/warnings relate to Jinja templates only.
 
 ## Accessibility
