@@ -19,24 +19,20 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}" class="white-text">Home</a></li>
-                    <!-- <li><a href="">Register</a></li> -->
-                    <!-- <li><a href="">Log in</a></li> -->
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Log in</a></li>
                     <li><a href="{{ url_for('surveys') }}" class="white-text">Surveys</a></li>
                     <li><a href="{{ url_for('add_survey') }}" class="white-text">Add Survey</a></li>
-                    <!-- <li><a href="">Search</a></li> -->
-                    <!-- <li><a href="">Export</a></li> -->
                 </ul>
             </div>
         </nav>
 
         <ul class="sidenav teal lighten-5" id="mobile-demo">
             <li><a href="{{ url_for('home') }}" class="teal-text text-darken-4">Home</a></li>
-            <!-- <li><a href="">Register</a></li> -->
-            <!-- <li><a href="">Log in</a></li> -->
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
             <li><a href="{{ url_for('surveys') }}" class="teal-text text-darken-4">Surveys</a></li>
             <li><a href="{{ url_for('add_survey') }}" class="teal-text text-darken-4">Add Survey</a></li>
-            <!-- <li><a href="">Search</a></li> -->
-            <!-- <li><a href="">Export</a></li> -->
         </ul>
     </header>
 
