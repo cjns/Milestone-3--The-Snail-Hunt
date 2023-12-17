@@ -71,3 +71,10 @@ p {
   background-color: #00897b !important;
   color: #FFFFFFE6 !important;
 }
+
+/* Links */
+a.hunt-snails {
+  color: #004d40;
+  text-decoration: underline;
+  font-style: italic;
+}

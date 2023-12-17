@@ -13,10 +13,10 @@
 <body class="teal lighten-5">
 
     <header>
-        <nav class="teal darken-3">
+        <nav class="teal darken-3" role="navigation" aria-label="Main Navigation">
             <div class="nav-wrapper">
                 <span class="brand-logo">Snail Hunt</span>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger" aria-label="Open navigation menu"><i class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}" class="white-text">Home</a></li>
                     {% if current_user.is_authenticated %}
@@ -64,7 +64,7 @@
     <footer class="page-footer teal darken-3">
         <div class="footer-copyright">
             <div class="container">
-                For Educational Purposes Only
+                <a href="mailto:support@example.com">Email for support</a>
                 <a class="white-text right" href="#" target="_blank">&copy; Snail Hunt</a>
             </div>
         </div>
