@@ -15,7 +15,7 @@
     <header>
         <nav class="teal darken-3">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Snail Hunt</a>
+                <a href="{{ url_for('home') }}" class="brand-logo">Snail Hunt</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}" class="white-text">Home</a></li>
@@ -35,9 +35,14 @@
 
         <ul class="sidenav teal lighten-5" id="mobile-demo">
             <li><a href="{{ url_for('home') }}" class="teal-text text-darken-4">Home</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
-            <li><a href="{{ url_for('login') }}">Log in</a></li>
+            {% if current_user.is_authenticated %}
+            <!-- Show logout when user is logged in -->
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            {% else %}
+            <!-- Show login / register when not logged in -->
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% endif %}
             <li><a href="{{ url_for('surveys') }}" class="teal-text text-darken-4">Surveys</a></li>
             <li><a href="{{ url_for('add_survey') }}" class="teal-text text-darken-4">Add Survey</a></li>
         </ul>

@@ -6,7 +6,8 @@
     - Add Survey
 
 - Home page
-    - How to hunt banded snails
+    - Snail hunt logo.
+    - How to hunt banded snails link.
 
 ## Buttons
 Surveys.html
