@@ -5,11 +5,13 @@ from flask_login import UserMixin
 
 class User(db.Model, UserMixin):
     # schema for the User model
-    user_id = db.Column(db.Integer, primary_key=True)
+    __tablename__ = 'user'
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(25), unique=True, nullable=False)
     email = db.Column(db.String(25), unique=True, nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
-    survey = db.relationship('Survey', backref='user', lazy=True)
+    surveys = db.relationship('Survey', backref='user',
+                              lazy=True, cascade="all, delete-orphan")
 
     @property
     def password(self):
@@ -29,13 +31,14 @@ class User(db.Model, UserMixin):
 
 class Survey(db.Model):
     # schema for the Task model
+    __tablename__ = 'survey'
     survey_id = db.Column(db.Integer, primary_key=True)
     survey_date = db.Column(db.Date, unique=False, nullable=False)
     survey_time = db.Column(db.Time, unique=False, nullable=False)
     survey_location = db.Column(db.Text, unique=False, nullable=False)
     survey_habitat = db.Column(db.Text, unique=False, nullable=False)
     survey_recorder = db.Column(db.Text, unique=False, nullable=False)
-    # user_id = db.Column(db.Integer, db.ForeignKey(User.user_id, ondelete="CASCADE"), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     yellow_brown_lipped_snail_0_bands = db.Column(
         db.Integer, unique=False, nullable=False)
     pink_brown_lipped_snail_0_bands = db.Column(
@@ -75,7 +78,7 @@ class Survey(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        # User ID: {self.user_id}
+        # User ID: {self.id}
         return f"""
             Survey ID: {self.survey_id}
             Survey Date: {self.survey_date}
