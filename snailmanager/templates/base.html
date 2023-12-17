@@ -21,7 +21,7 @@
                     <li><a href="{{ url_for('home') }}" class="white-text">Home</a></li>
                     {% if current_user.is_authenticated %}
                     <!-- Show logout when user is logged in -->
-                    <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="logout">Log out</a></li>
                     {% else %}
                     <!-- Show login / register when not logged in -->
                     <li><a href="{{ url_for('login') }}">Log in</a></li>

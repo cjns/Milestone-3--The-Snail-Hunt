@@ -53,13 +53,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Logout confirmation
+    /**
+     * Adds a click event listener to the logout link with the class 'logout'.
+     * When the logout link is clicked, a confirmation dialog will appear.
+     * If the user clicks "Cancel", the default action of the event (logging out) is cancelled.
+     */
+    const logoutLink = document.querySelector('.logout');
+    logoutLink.addEventListener('click', (event) => {
+        const confirmation = confirm('Are you sure you want to logout?');
+        if (!confirmation) {
+            event.preventDefault();
+        }
+    });
+
     // Check if there are any flash messages
     var flashMessage = document.getElementById('flash-message');
     if (flashMessage) {
         // Get the class name from the data-class attribute
         var className = flashMessage.getAttribute('data-class');
         // Display the toast
-        M.toast({html: flashMessage.textContent, classes: className});
+        M.toast({ html: flashMessage.textContent, classes: className });
     }
 
 });
