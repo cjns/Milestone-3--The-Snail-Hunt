@@ -135,6 +135,8 @@ def edit_survey(survey_id):
             "brown_white_lipped_snail_many_bands")
         db.session.commit()
         flash('Survey updated successfully.', 'success-toast')
+        # Redirect to surveys page
+        return redirect(url_for('surveys'))
     return render_template("edit_survey.html", survey=survey)
 
 
