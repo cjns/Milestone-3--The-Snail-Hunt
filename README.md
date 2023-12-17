@@ -44,7 +44,7 @@ I have assigned a score out of five (5) to the importance and viability / feasib
 |Opportunity / Problem|Importance|Viability / Feasibility|Result|Possible Solution|
 |-|-|-|-|-|
 |Understand what the site is for|5|5|Will be addressed.|Include an introduction on the main page.|
-|Find out more information about the site's purpose|5|5|Will be addressed.|Include a separate page that provides more information about the study.|
+|Find out more information about the site's purpose|5|5|Will be addressed.|Link to an external resource that describes the study.|
 |Create, view, update, and delete my entries|5|5|Will be addressed.|Use the Flask Framework and Postgresql to store and manipulate information.|
 |Register for an account|5|5|Will be addressed.|Include a registration page.|
 |Log in to my account|5|5|Will be addressed.|Include a login page.|
@@ -52,76 +52,113 @@ I have assigned a score out of five (5) to the importance and viability / feasib
 |Search all entries|5|1|Future implementation.|Currently out of scope.|
 |Export data to a spread sheet|5|1|Future implementation.|Currently out of scope.|
 |See and edit my profile|5|1|Future implementation.|Currently out of scope.|
+|Contact someone for support|5|5|Will be addressed.|Add an email address in the footer.|
 
-# Features
+## Features
 > 'What are we going to make?'
 
 I am making a web application that will contain the following pages.
 
-1. Home page with intro.
-Problem it addresses: Understand what the site is for.
+### Home page with introduction and a link to an external resource with more information.
+Problem(s) it addresses:
+- Understand what the site is for.
+- Find out more information about the site's purpose.
 
-2. A page with additional information about the study.
-Problem it addresses: Find out more information about the site's purpose.
+## A page to view surveys (surveys.html)
+Problem(s) it addresses:
+- View surveys.
 
-3. A page to add/modify a survey.
-Problem it addresses: Create, view, update, and delete my entries.
+## A page to add surveys (add_surveys.html)
+Problem(s) it addresses:
+- Add surveys.
 
-4. A page to register an account.
-5. A page to login.
-6. A link to logout.
+## A button to edit/delete surveys
+Problem(s) it addresses:
+- Update and delete surveys.
 
+## A page to register an account (register.html)
+Problem(s) it addresses:
+- The ability to create your own account.
+
+## A page to login (login.html)
+Problem(s) it addresses:
+- The ability to login to your account.
+
+## A link to logout
+Problem(s) it addresses:
+- The ability to logout of your account.
+
+## Confirmation alerts
+- When submitting an edit to a survey.
+- When confirming an edit.
+- When deleting a survey.
+- When adding a survey.
+- When logging out.
+
+## Materialize toasts
+- After editing a survey.
+- After adding a survey.
+- After deleting a survey.
 
 ## Database
 ### ERD Components
 A 'Student' can have multiple 'SnailObservation' records. This is a one-to-many relationship.
 
-1. Entity: Student
+1. Entity: User
    - Attributes:
    - id (Primary Key)
-   - name (string)
-   - email (string)
-   - password (string)
+   - username (text)
+   - password (text)
 
-2. Entity: SnailObservation
+2. Entity: Survey
    - Attributes:
-   - observation_id (Primary Key)
-   - observation_date (date)
-   - snail_color (string)
-   - banding_count (integer)
-   - location (string)
-   - habitat (string)
-   - student_id (Foreign Key referencing Student).
+   - survey_id (Primary Key)
+   - survey_date (date)
+   - survey_time (time)
+   - survey_location (text)
+   - survey_habitat (text)
+   - survey-recorder (text)
+   - user_id (integer, foreign key referencing user id)
+   - yellow_brown_lipped_snail_0_bands (integer)
+   - pink_brown_lipped_snail_0_bands (integer)
+   - brown_brown_lipped_snail_0_bands (integer)
+   - yellow_brown_lipped_snail_1_band (integer)
+   - pink_brown_lipped_snail_1_band (integer)
+   - brown_brown_lipped_snail_1_band (integer)
+   - yellow_brown_lipped_snail_many_bands (integer)
+   - pink_brown_lipped_snail_many_bands (integer)
+   - brown_brown_lipped_snail_many_bands (integer)
+   - yellow_white_lipped_snail_0_bands (integer)
+   - pink_white_lipped_snail_0_bands (integer)
+   - brown_white_lipped_snail_0_bands (integer)
+   - yellow_white_lipped_snail_1_band (integer)
+   - pink_white_lipped_snail_1_band (integer)
+   - brown_white_lipped_snail_1_band (integer)
+   - yellow_white_lipped_snail_many_bands (integer)
+   - pink_white_lipped_snail_many_bands (integer)
+   - brown_white_lipped_snail_many_bands (integer)
 
 ## Future Implementations
+### A page with search functionality.
+Problem(s) it addresses:
+- Search all entries.
 
-4. A registration page.
-Problem it addresses: Register for an account.
-
-5. A login page.
-Problem it addresses: Log in to my account.
-
-6. A page with search functionality.
-Problem it addresses: Search all entries.
-
-7. The ability to export the data.
-Problem it addresses: Export data to a spread sheet.
+### The ability to export the data.
+Problem(s) it addresses:
+- Export data to a spread sheet.
 
 ## Success Metrics
-
 The following metrics can be measured to track the website's success:
 
 - Google Analytics.
 - Search engine listings.
 
 ## Accessibility
-
 - Use semantic HTML.
 - Ensure sufficient colour contrast.
 - Provide information for screen readers where appropriate (e.g. aria-labels).
 
 # Design Choices
-
 ## Sitemap
 
 ## Wireframes
@@ -144,11 +181,11 @@ Cons:
 # Technologies
 - HTML
 - CSS
-- Materialize
 - JavaScript
-- Jest
-- Node
-- Babel
+- Materialize CSS
+- Python
+- Flash
+- Jinja
 
 # Other Resources
 - [Am I Responsive](https://ui.dev/amiresponsive/): Images of responsive design.
