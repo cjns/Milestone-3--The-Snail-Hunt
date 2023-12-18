@@ -33,9 +33,9 @@ The following tools were used for testing:
 |Add Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|[Mobile](assets/images/lighthouse-add_survey-mobile.webp)|[Desktop](assets/images/lighthouse-add_survey-desktop.webp)|Errors/warnings relate to Jinja templates only.|
 |Edit Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|[Mobile](assets/images/lighthouse-edit_survey-mobile.webp)|[Desktop](assets/images/lighthouse-edit_survey-desktop.webp)|Errors/warnings relate to Jinja templat only.|
 |403|Valid|[Mobile](assets/images/lighthouse-403-mobile.webp)|[Desktop](assets/images/lighthouse-403-desktop.webp)|Pages with unsuccessful HTTP status codes may not be indexed properly|
-|404|Valid|||
-|405|Valid|||
-|500|Valid|||
+|404|Valid|[Mobile](assets/images/lighthouse-404-mobile.webp)|[Desktop](assets/images/lighthouse-404-desktop.webp)|Pages with unsuccessful HTTP status codes may not be indexed properly|
+|405|Valid|Unable to test|Unable to test|
+|500|Valid|Unable to test|Unable to test|
 |Base|Valid|n/a|n/a|
 
 ## Accessibility
@@ -46,42 +46,41 @@ The following tools were used for testing:
 |Login|[Pass](assets/images/wave-login.webp)||
 |Surveys|[Pass](assets/images/wave-surveys.webp)||
 |Add Survey|[Pass*](assets/images/wave-add_survey.webp)|Alerts are due to Materialize CSS including tab indexes after the [Time Picker Buttons](assets/images/wave-time_picker_buttons.webp)|
-|Edit Survey|[Pass*](assets/images/wave-edit_survey.webp)|Alerts are due to Materialize CSS including tab indexes after the [Time Picker Buttons](assets/images/wave-time_picker_buttons.webp)|
-|403|[Pass*](assets/images/wave-403.webp)|||
-|404||||
-|405||||
-|500||||
+|Edit Survey|[Pass*](assets/images/wave-edit_survey.webp)|Alerts are due to Materialize CSS including tab indexes after the [Time Picker Buttons](assets/images/wave-time_picker_buttons.webp)||
+|403|[Pass](assets/images/wave-403.webp)||
+|404|[Pass](assets/images/wave-404.webp)||
+|405|Unable to test|Unable to test|
+|500|Unable to test|Unable to test|
 
 
 ## CSS
 |File|Validation|
 |-|-|
-|style.css|[Valid, no error found](https://jigsaw.w3.org/css-validator/#validate_by_uri)|
+|style.css|[Valid, no error found](assets/images/css-valid.webp)|
 
 ## JavaScript
-|File|Validation|
-|-|-|
-|script.js|[Valid*](assets/images/js-valid.webp)|
-*'M' refers to the global object for Materialize.
+|File|Validation|Notes|
+|-|-|-|
+|script.js|[Valid*](assets/images/js-valid.webp)||
 
 ## Python
-|File|Valid|
-|-|-|
-|forms.py|-|
-|models.py|-|
-|routes.py|-|
-|run.py|-|
-|__init__.py|-|
+|File|Valid|Notes|
+|-|-|-|
+|forms.py|[Valid](assets/images/forms.webp)||
+|models.py|[Valid](assets/images/models.webp)||
+|routes.py|[Valid](assets/images/routes.webp)||
+|run.py|[Valid](assets/images/run.webp)||
+|__init__.py|[Valid](assets/images/init.webp)||
 
 ## Nav & Footer Links
 |Link|Expected Outcome|Testing|Result|Pass/Fail|
 |-|-|-|-|-|
-|Home|-|-|-|-|
-|Login|-|-|-|-|
-|Register|-|-|-|-|
-|Surveys|-|-|-|-|
-|Add Survey|-|-|-|-|
-|Email for support|-|-|-|-|
+|Home|Go to home page|Click link|Goes to expected page|Pass|
+|Login|Go to login page|Click link|Goes to expected page|Pass|
+|Register|Go to register page|Click link|Goes to expected page|Pass|
+|Surveys|Go to surveys page|Click link|Goes to expected page|Pass|
+|Add Survey|Go to add survey page|Click link|Goes to expected page|Pass|
+|Email for support|Opens email client|Click link|Opens email client|Pass|
 
 ## Home page
 |Feature|Expected Outcome|Testing|Result|Pass/Fail|
