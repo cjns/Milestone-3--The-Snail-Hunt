@@ -81,30 +81,27 @@ The web application will include the following features:
 ### Data Operations
 #### Creating a User
 A new user can be created by sending a POST request to the /register route with the following parameters:
-
-username: The username of the new user.
-password: The password of the new user.
-The password is hashed before being stored in the database.
+- username: The username of the new user.
+- password: The password of the new user.
+- The password is hashed before being stored in the database.
 
 #### Logging In
 A user can log in by sending a POST request to the /login route with the following parameters:
-
-username: The username of the user.
-password: The password of the user.
-The password is verified against the stored hash.
+- username: The username of the user.
+- password: The password of the user.
+- The password is verified against the stored hash.
 
 #### Logging Out
 A user can log out by navigating to the /logout route.
 
 #### Creating a Survey
 A new survey can be created by sending a POST request to the /add_survey route with the following parameters:
-
-survey_date: The date of the survey.
-survey_time: The time of the survey.
-survey_location: The location of the survey.
-survey_habitat: The habitat of the survey.
-survey_recorder: The recorder of the survey.
-Various counts of different types of snails.
+- survey_date: The date of the survey.
+- survey_time: The time of the survey.
+- survey_location: The location of the survey.
+- survey_habitat: The habitat of the survey.
+- survey_recorder: The recorder of the survey.
+- Various counts of different types of snails.
 
 #### Updating a Survey
 A survey can be updated by sending a POST request to the /edit_survey route with the same parameters as creating a survey.
@@ -118,42 +115,43 @@ All surveys can be viewed by navigating to the /surveys route. The surveys are o
 #### Error Handling
 The application has error handlers for the following HTTP status codes: 403, 404, 405, and 500. When these errors occur, the user is redirected to a corresponding error page.
 
-Please note that all POST requests require the user to be logged in. If a user is not logged in, they will be redirected to the login page.
+All POST requests require the user to be logged in. If a user is not logged in, they will be redirected to the login page.
 
 ### ERD Components
 1. Entity: User
    - Attributes:
-   - id (Primary Key)
-   - username (text)
-   - password (text)
+     - id (Primary Key)
+     - username (text)
+     - password (hashed text)
+     - surveys (relationship to Survey)
 
 2. Entity: Survey
    - Attributes:
-   - survey_id (Primary Key)
-   - survey_date (date)
-   - survey_time (time)
-   - survey_location (text)
-   - survey_habitat (text)
-   - survey-recorder (text)
-   - user_id (integer, foreign key referencing user id)
-   - yellow_brown_lipped_snail_0_bands (integer)
-   - pink_brown_lipped_snail_0_bands (integer)
-   - brown_brown_lipped_snail_0_bands (integer)
-   - yellow_brown_lipped_snail_1_band (integer)
-   - pink_brown_lipped_snail_1_band (integer)
-   - brown_brown_lipped_snail_1_band (integer)
-   - yellow_brown_lipped_snail_many_bands (integer)
-   - pink_brown_lipped_snail_many_bands (integer)
-   - brown_brown_lipped_snail_many_bands (integer)
-   - yellow_white_lipped_snail_0_bands (integer)
-   - pink_white_lipped_snail_0_bands (integer)
-   - brown_white_lipped_snail_0_bands (integer)
-   - yellow_white_lipped_snail_1_band (integer)
-   - pink_white_lipped_snail_1_band (integer)
-   - brown_white_lipped_snail_1_band (integer)
-   - yellow_white_lipped_snail_many_bands (integer)
-   - pink_white_lipped_snail_many_bands (integer)
-   - brown_white_lipped_snail_many_bands (integer)
+      - survey_id (Primary Key)
+      - survey_date (date)
+      - survey_time (time)
+      - survey_location (text)
+      - survey_habitat (text)
+      - survey-recorder (text)
+      - user_id (integer, foreign key referencing User id)
+      - yellow_brown_lipped_snail_0_bands (integer)
+      - pink_brown_lipped_snail_0_bands (integer)
+      - brown_brown_lipped_snail_0_bands (integer)
+      - yellow_brown_lipped_snail_1_band (integer)
+      - pink_brown_lipped_snail_1_band (integer)
+      - brown_brown_lipped_snail_1_band (integer)
+      - yellow_brown_lipped_snail_many_bands (integer)
+      - pink_brown_lipped_snail_many_bands (integer)
+      - brown_brown_lipped_snail_many_bands (integer)
+      - yellow_white_lipped_snail_0_bands (integer)
+      - pink_white_lipped_snail_0_bands (integer)
+      - brown_white_lipped_snail_0_bands (integer)
+      - yellow_white_lipped_snail_1_band (integer)
+      - pink_white_lipped_snail_1_band (integer)
+      - brown_white_lipped_snail_1_band (integer)
+      - yellow_white_lipped_snail_many_bands (integer)
+      - pink_white_lipped_snail_many_bands (integer)
+      - brown_white_lipped_snail_many_bands (integer)
 
 # Future Implementations
 The following features are planned for future development:
