@@ -2,12 +2,12 @@
 
 {% block content %}
 <div class="container">
-    <h2>Register</h2>
+    <h1>Register</h1>
     <form action="{{ url_for('register') }}" method="post" class="col s12">
         {{ form.hidden_tag() }}
         <div class="row">
             <div class="input-field col s12">
-                {{ form.username.label(class="active") }}
+                {{ form.username.label(class="active")  }}
                 {{ form.username(class="validate") }}
                 {% for error in form.username.errors %}
                 <span class="helper-text red-text">{{ error }}</span>

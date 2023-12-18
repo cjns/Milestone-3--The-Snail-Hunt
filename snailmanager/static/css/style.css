@@ -44,9 +44,13 @@ h6 {
 }
 
 /* Paragraphs */
-
 p {
   color: #004d40;
+}
+
+/* Input Fields */
+.input-field label {
+  color: black;
 }
 
 /* Tables */
@@ -70,6 +74,7 @@ p {
 }
 
 /* Toasts */
+.toast,
 .success-toast {
   background-color: #00897b !important;
   color: #FFFFFFE6 !important;
