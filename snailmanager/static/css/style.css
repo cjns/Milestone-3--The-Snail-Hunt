@@ -98,3 +98,20 @@ a.dark-link {
     /* padding-top: 2rem !important; */
   }
 }
+
+/* Date & Time Picker */
+.datepicker-date-display,
+.timepicker-digital-display {
+  background-color: #004d40;
+}
+
+.datepicker-clear,
+.timepicker-clear {
+  color: #AC1E11;
+}
+
+.timepicker-close,
+.datepicker-done,
+.datepicker-cancel {
+  color: #004d40;
+}

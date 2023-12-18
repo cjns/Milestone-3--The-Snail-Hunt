@@ -7,14 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let datepicker = document.querySelectorAll('.datepicker');
     M.Datepicker.init(datepicker, {
         format: "dd mmmm, yyyy",
-        i18n: { done: "Ok" }
+        i18n: { done: "Ok", cancel: "Cancel", clear: "Clear" },
+        showClearBtn: true
     });
 
     // Time Picker
     let timepicker = document.querySelectorAll('.timepicker');
     M.Timepicker.init(timepicker, {
         twelveHour: false, // Use 24-hour format
-        i18n: { done: "Ok" }
+        i18n: { done: "Ok", cancel: "Cancel", clear: "Clear" },
+        showClearBtn: true
     });
 
     // Collapsibles
