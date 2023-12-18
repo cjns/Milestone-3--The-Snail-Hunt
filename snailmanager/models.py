@@ -24,8 +24,8 @@ class User(db.Model, UserMixin):
         return check_password_hash(self.password_hash, password)
 
     def __repr__(self):
-        # __repr__ to represent itself in the form of a string
-        return f'<User: {self.username}>'
+    # __repr__ to represent itself in the form of a string
+    return f'<User: {self.username}, ID: {self.id}>'
 
 
 class Survey(db.Model):
