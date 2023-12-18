@@ -105,11 +105,13 @@ a.dark-link {
   background-color: #004d40;
 }
 
+/* Clear buttons */
 .datepicker-clear,
 .timepicker-clear {
   color: #AC1E11;
 }
 
+/* Close, Done, and Cancel buttons */
 .timepicker-close,
 .datepicker-done,
 .datepicker-cancel {
