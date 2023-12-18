@@ -8,21 +8,21 @@
         <div class="row">
             <div class="input-field col s12">
                 {{ form.username.label(class="active")  }}
-                {{ form.username(class="validate") }}
+                {{ form.username(class="validate", aria_label="Username") }}
                 {% for error in form.username.errors %}
                 <span class="helper-text red-text">{{ error }}</span>
                 {% endfor %}
             </div>
             <div class="input-field col s12">
                 {{ form.password.label(class="active") }}
-                {{ form.password(class="validate") }}
+                {{ form.password(class="validate", aria_label="Password") }}
                 {% for error in form.password.errors %}
                 <span class="helper-text red-text">{{ error }}</span>
                 {% endfor %}
             </div>
             <div class="input-field col s12">
                 {{ form.confirm_password.label(class="active") }}
-                {{ form.confirm_password(class="validate") }}
+                {{ form.confirm_password(class="validate", aria_label="Confirm Password") }}
                 {% for error in form.confirm_password.errors %}
                 <span class="helper-text red-text">{{ error }}</span>
                 {% endfor %}
