@@ -32,11 +32,11 @@ The following tools were used for testing:
 |Surveys|[Valid*](https://validator.w3.org/#validate_by_uri)|||
 |Add Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|||
 |Edit Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|||
-|403|[Valid]()|||
-|404|[Valid]()|||
-|405|[Valid]()|||
-|500|[Valid]()|||
-|Base|[Valid]()|||
+|403|Valid|||
+|404|Valid|||
+|405|Valid|||
+|500|Valid|||
+|Base|Valid|||
 * Errors/warnings relate to Jinja templates only.
 
 ## Accessibility
