@@ -4,7 +4,7 @@
 <h1 class="center-align">Surveys</h1>
 <div class="row">
   <div class="col s12 center-align">
-    <a href="{{ url_for('add_survey') }}" class="btn-large teal darken-1">
+    <a href="{{ url_for('add_survey') }}" class="btn-large teal darken-2">
       Add Survey <i class="fa-solid fa-square-plus right"></i>
     </a>
   </div>
@@ -13,7 +13,7 @@
 <ul class="collapsible">
   {% for survey in surveys|sort(attribute="survey_date") %}
   <li>
-    <div class="collapsible-header white-text teal darken-5">
+    <div class="collapsible-header white-text teal darken-2">
       <i class="fa-solid fa-caret-down"></i>
       <strong>{{ survey.survey_date.strftime("%d/%b/%Y") }}, {{ survey.survey_location }}, {{ survey.survey_recorder
         }}</strong>
@@ -29,7 +29,7 @@
         <caption>Brown lipped snail (Corea nemoralis)</caption>
         <thead>
           <tr>
-            <th></th>
+            <th># of bands</th>
             <th>Yellow</th>
             <th>Pink</th>
             <th>Brown</th>
@@ -61,7 +61,7 @@
         <caption>White lipped snail (Corea hortensis)</caption>
         <thead>
           <tr>
-            <th></th>
+            <th># of bands</th>
             <th>Yellow</th>
             <th>Pink</th>
             <th>Brown</th>
