@@ -91,3 +91,10 @@ a.dark-link {
   text-decoration: underline;
   font-style: italic;
 }
+
+/* Survey Snail Count */
+@media screen and (max-width: 320px) {
+  .snail-count {
+    /* padding-top: 2rem !important; */
+  }
+}
