@@ -22,6 +22,19 @@ class RegistrationForm(FlaskForm):
     submit = SubmitField('Register')
 
     def validate_username(self, username):
+        """
+        Validate the username by checking if it's already taken in the
+        database.
+
+        This function queries the database for the provided username. If a user
+        with that username already exists, it raises a ValidationError.
+
+        Parameters:
+        username (str): The username to validate.
+
+        Raises:
+        ValidationError: If the username is already taken.
+        """
         user = User.query.filter_by(username=username.data).first()
         if user:
             raise ValidationError(

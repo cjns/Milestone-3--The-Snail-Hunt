@@ -30,6 +30,19 @@ login_manager.login_view = 'login'  # Specify the route name of your login view
 # User loader function for Flask-Login
 @login_manager.user_loader
 def load_user(user_id):
+    """
+    User loader callback for Flask-Login.
+
+    This function is used by Flask-Login to reload the user object from
+    the user ID stored in the session. It takes a unicode ID and uses that
+    to get the user from the database.
+
+    Parameters:
+    user_id (str): The unicode ID of the user to load.
+
+    Returns:
+    User: The user object if found, else None.
+    """
     # Import inside function to avoid circular imports
     from snailmanager.models import User
     return User.query.get(int(user_id))
