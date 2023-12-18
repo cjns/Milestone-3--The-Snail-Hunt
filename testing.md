@@ -26,17 +26,17 @@ The following tools were used for testing:
 ## HTML, Accessibility, & Performance
 |Page|HTML|Lighthouse Mobile|Lighthouse Desktop|
 |-|-|-|-|
-|Home|[Valid*](https://validator.w3.org/)|||
-|Log in|[Valid*](https://validator.w3.org/)|||
-|Register|[Valid*](https://validator.w3.org/)|||
-|Surveys|[Valid*](https://validator.w3.org/)|||
-|Add Survey|[Valid*](https://validator.w3.org/)|||
-|Edit Survey|[Valid*](https://validator.w3.org/)|||
-|403||||
-|404||||
-|405||||
-|500||||
-|Base||||
+|Home|[Valid*](https://validator.w3.org/#validate_by_uri)|||
+|Log in|[Valid*](https://validator.w3.org/#validate_by_uri)|||
+|Register|[Valid*](https://validator.w3.org/#validate_by_uri)|||
+|Surveys|[Valid*](https://validator.w3.org/#validate_by_uri)|||
+|Add Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|||
+|Edit Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|||
+|403|[Valid]()|||
+|404|[Valid]()|||
+|405|[Valid]()|||
+|500|[Valid]()|||
+|Base|[Valid]()|||
 * Errors/warnings relate to Jinja templates only.
 
 ## Accessibility
@@ -48,6 +48,10 @@ The following tools were used for testing:
 |Surveys||
 |Add Survey||
 |Edit Survey||
+403
+404
+405
+500
 
 ## CSS
 |File|Validation|
