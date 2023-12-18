@@ -26,12 +26,12 @@ The following tools were used for testing:
 ## HTML, Accessibility, & Performance
 |Page|HTML|Lighthouse Mobile|Lighthouse Desktop|
 |-|-|-|-|
-|Home|[Valid*](https://validator.w3.org/#validate_by_uri)|||
-|Log in|[Valid*](https://validator.w3.org/#validate_by_uri)|||
-|Register|[Valid*](https://validator.w3.org/#validate_by_uri)|||
-|Surveys|[Valid*](https://validator.w3.org/#validate_by_uri)|||
-|Add Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|||
-|Edit Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|||
+|Home|[Valid*](https://validator.w3.org/#validate_by_uri)|[Mobile](assets/images/lighthouse-home-mobile.webp)|[Desktop](assets/images/lighthouse-home-desktop.webp)|
+|Register|[Valid*](https://validator.w3.org/#validate_by_uri)|[Mobile](assets/images/lighthouse-register-mobile.webp)|[Desktop](assets/images/lighthouse-register-desktop.webp)|
+|Log in|[Valid*](https://validator.w3.org/#validate_by_uri)|[Mobile](assets/images/lighthouse-login-mobile.webp)|[Desktop](assets/images/lighthouse-login-desktop.webp)|
+|Surveys|[Valid*](https://validator.w3.org/#validate_by_uri)|[Mobile](assets/images/lighthouse-surveys-mobile.webp)|[Desktop](assets/images/lighthouse-surveys-desktop.webp)|
+|Add Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|[Mobile](assets/images/lighthouse-add_survey-mobile.webp)|[Desktop](assets/images/lighthouse-add_survey-desktop.webp)|
+|Edit Survey|[Valid*](https://validator.w3.org/#validate_by_uri)|[Mobile](assets/images/lighthouse-edit_survey-mobile.webp)|[Desktop](assets/images/lighthouse-edit_survey-desktop.webp)|
 |403|Valid|||
 |404|Valid|||
 |405|Valid|||
@@ -42,16 +42,17 @@ The following tools were used for testing:
 ## Accessibility
 |Page|Wave Validation|
 |-|-|
-|Home||
-|Login||
-|Register||
-|Surveys||
-|Add Survey||
-|Edit Survey||
+|Home|[Pass](assets/images/wave-home.webp)|
+|Register|[Pass](assets/images/wave-register.webp)|
+|Login|[Pass](assets/images/wave-login.webp)|
+|Surveys|[Pass](assets/images/wave-surveys.webp)|
+|Add Survey|[Pass*](assets/images/wave-add_survey.webp)|
+|Edit Survey|[Pass*](assets/images/wave-edit_survey.webp)|
 403
 404
 405
 500
+* Alerts are due to Materialize CSS including tab indexes after the [Time Picker Buttons](assets/images/wave-time_picker_buttons.webp).
 
 ## CSS
 |File|Validation|
