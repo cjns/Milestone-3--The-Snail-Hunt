@@ -1,3 +1,5 @@
+![Am I Responsive](assets/images/am-i-responsive.webp)
+
 # Milestone 3: The Snail Hunt
 ## Rationale and Development Plan for the Snail Hunt Web Application
 ### Rationale
